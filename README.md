@@ -93,6 +93,8 @@ The need for flexibility drives our choice to utilize a Level 0 DFD: we aim to g
 
 **Note that diagrams are SVG so open in live server to view if you are reading this as a MD file. If you are viewing this from the github depo on a laptop the full diagram might not be shown unless you click on the SVG file. Feel free to zoom in of any diagram**
 
+![Alt text](Dataflow/Legend.PNG)
+
 ### Individual functions data flow system
 ![Alt text](Dataflow/Comment.svg)
 ![Alt text](Dataflow/Filtering.svg)
