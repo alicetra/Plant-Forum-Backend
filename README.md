@@ -139,7 +139,7 @@ Link to live board
 ### Tuesday 13 Feb
 ![Alt text](Trello/Kat/tue-13-feb/13-feb-1.jpg)
 ![Alt text](Trello/Kat/tue-13-feb/13-feb-2.jpg)
-![Alt text](Trello/Alice/13022024AT.JPG)
+![Alt text](Trello/Alice/120224AT.JPG)
 ![Alt text](Trello/Alice/13022024AT1.JPG)
 ![Alt text](Trello/Alice/1302204AT2.JPG)
 
