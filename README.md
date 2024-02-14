@@ -95,9 +95,9 @@ The need for flexibility drives our choice to utilize a Level 0 DFD: we aim to g
 
 ### Individual functions data flow system
 ![Alt text](Dataflow/Comment.svg)
-![Alt text](Dataflow/Filtering.PNG)
-![Alt text](Dataflow/Liking.PNG)
-![Alt text](Dataflow/Picture.PNG)
+![Alt text](Dataflow/Filtering.svg)
+![Alt text](Dataflow/Liking.svg)
+![Alt text](Dataflow/Picture.svg)
 ![Alt text](Dataflow/Thread.svg)
 ![Alt text](Dataflow/User.svg)
 ![Alt text](Dataflow/View.svg)
