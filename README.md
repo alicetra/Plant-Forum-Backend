@@ -91,7 +91,7 @@ We developed a Level 0 Data Flow Diagram (DFD) in the context of our project to 
 
 The need for flexibility drives our choice to utilize a Level 0 DFD: we aim to grasp the data flow model broadly, without fixating on specific details. This strategic approach accommodates potential changes—likely during the upcoming production phase.
 
-**Note that most diagrams are SVG so open in live server to view. If you are viewing this on a laptop the full diagram might not be shown unless you click on the SVG file. Please click on any pictures to zoom and view if needed**
+**Note that diagrams are SVG so open in live server to view if you are reading this as a MD file. If you are viewing this from the github depo on a laptop the full diagram might not be shown unless you click on the SVG file. Feel free to zoom in of any diagram**
 
 ### Individual functions data flow system
 ![Alt text](Dataflow/Comment.svg)
