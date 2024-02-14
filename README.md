@@ -1,10 +1,26 @@
-# Plant-Forum - Sproutly
+# Sproutly 🌱
 
-### Alice Tram, Kat Mountford, Ali Eideh
+A full stack web application by **Alice Tram, Katrice Mountford & Ali Eideh**
 
-## README Contents:
+## Links
+- [Backend Github Repo](https://github.com/alicetra/Plant-Forum-Backend)
+- Frontend Github Repo
+
+# Table of Contents
+- [General](#general)
+    - [Purpose](#purpose)
+    - [Functionality and Features](#functionality-and-features)
+    - [Target Audience](#target-audience)
+    - [Tech Stack](#tech-stack)
+- [Dataflow Diagrams](#data-flow-diagrams)
+- [Application Architecture Diagram](#application-architecture-diagram)
+- [User Stories](#user-stories)
+- [Wireframes](#wireframes)
+- [Development Plan (Trello Board)](#trello-board)
+- [References](#references)
 
 
+# General
 
 ## Purpose
 
@@ -13,19 +29,42 @@ Plant enthusiasts currently engage in fragmented online communities focused on v
 We want our site to be therefore specifically targeted towards this younger age group through aesthetics and functionality.
 
 ## Functionality and Features
-- **Regitration** : Ability to create an account/profile.
-- **Login** : Ability to log-in.
-- **User data CRUD** : Users would be able to view,ammend their credentials and delete their accounts.
-- **Threads** : Log-in Users would have the ability to start a thread with a specific title. 
-- **Commenting** : Log-in users would be allow to comments on threads.
-- **Filtering** : All Users (anonymous/lurkers included) would have the ability to filter by dates the comments and threads posts (ascending and descending).
-- **Search** : All Users would have the ability to search threads by tags.
-- **Pictures** : Log-in Users would be allow to include pictures in their posts.
-- **Edit/Deleting** : Log-in Users would be allow to edit their post and delete their comments.
-- **Reacting** : Log-in Users would be able to react to comments and threads.
-- **Infinite scroll** : For better user experience we will implement an infinite scroll feature instead of pages.
-- **View** : All users, will be able to view threads and comments.
-- **Likes and comment counts** : All users would be able to view how many upvote/like a threads has and how many comments is in that thread.
+**Login and Sign up**
+- New users are able to create a new account/profile
+- Existing users are able to log in to their existing account using their username and password
+
+**User data CRUD**
+- Users are able to view and update their account details as well as delete their accounts
+
+**Threads**
+- Users that are logged in are able to start a thread through craeting a new post with a title and content body. 
+
+**Commenting** 
+- Users that are logged in are able to comment on threads (content body).
+
+**Filtering** 
+- All users (anonymous/lurkers included) are able to filter their homepage by by dates the comments and threads posts (ascending and descending).
+
+**Search**
+- All Users would have the ability to search threads by tags.
+
+**Pictures**
+- Log-in Users would be allow to include pictures in their posts.
+
+**Edit/Deleting**
+- Log-in Users would be allow to edit their post and delete their comments.
+
+**Reacting**
+- Log-in Users would be able to react to comments and threads.
+
+**Infinite scroll**
+- For better user experience we will implement an infinite scroll feature instead of pages.
+
+**View**
+- All users, will be able to view threads and comments.
+
+**Likes and comment counts**
+ - All users would be able to view how many upvote/like a threads has and how many comments is in that thread.
 
 
 ## Target Audience
@@ -62,7 +101,7 @@ Description: React is a powerful JavaScript library for building dynamic user in
 **Node.js**: Serves as the runtime environment for the MERN stack.  
 Description: Node.js is a server-side JavaScript runtime that enables running JavaScript code outside the browser. It provides an event-driven, non-blocking  model, making it efficient for handling concurrent requests. Nodes will be used with Express.js to help us develop our server-side tasks.
 
-## Data Flow Diagrams
+# Data Flow Diagrams
 We developed a Level 0 Data Flow Diagram (DFD) in the context of our project to provide an overarching view of our data. This highest level DFD represents major processes, data flows, and database within the system without delving into their intricate details.
 
 The need for flexibility drives our choice to utilize a Level 0 DFD: we aim to grasp the data flow model broadly, without fixating on specific details. This strategic approach accommodates potential changes—likely during the upcoming production phase.
@@ -85,7 +124,19 @@ Please note that for readability, the ouput back to user wasn't shown in this ov
 ![Alt text](Dataflow/Combine.svg)
 
 
-## References 
+# Application Architecture Diagram
+
+# User Stories
+
+# Wireframes
+
+# Trello Board
+
+Link to live board
+
+
+
+# References 
 GeeksforGeeks. (n.d.). Levels in Data Flow Diagrams (DFD). Available at: https://www.geeksforgeeks.org/levels-in-data-flow-diagrams-dfd/
 
 Revitsky, L. (2020). Gen Z Houseplant Ownership Stems from the Desire to Care for Something Alive. [online] CivicScience. Available at: https://civicscience.com/gen-z-houseplant-ownership-stems-from-the-desire-to-care-for-something-alive/.
