@@ -119,6 +119,10 @@ Please note that for readability, the ouput back to user wasn't shown in this ov
 
 Link to live board
 
+### Friday 9 Feb
+![Alt text](Trello/Alice/09022024AT1.JPG)
+![Alt text](Trello/Alice/09022024AT2.JPG)
+
 ### Monday 12 Feb
 ![Alt text](Trello/Kat/mon-12-feb/12-feb-1.jpg)
 ![Alt text](Trello/Kat/mon-12-feb/12-feb-2.jpg)
@@ -126,16 +130,25 @@ Link to live board
 ![Alt text](Trello/Kat/mon-12-feb/12-feb-4.jpg)
 ![Alt text](Trello/Kat/mon-12-feb/12-feb-5.jpg)
 ![Alt text](Trello/Kat/mon-12-feb/12-feb-6.jpg)
+![Alt text](Trello/Alice/12022024AT.JPG)
+![Alt text](Trello/Alice/12022024AT1.JPG)
+![Alt text](Trello/Alice/12022024AT2.JPG)
 
 ### Tuesday 13 Feb
 ![Alt text](Trello/Kat/tue-13-feb/13-feb-1.jpg)
 ![Alt text](Trello/Kat/tue-13-feb/13-feb-2.jpg)
+![Alt text](Trello/Alice/13022024AT.JPG)
+![Alt text](Trello/Alice/13022024AT1.JPG)
+![Alt text](Trello/Alice/1302204AT2.JPG)
 
 ### Wednesday 14 Feb
 ![Alt text](Trello/Kat/wed-14-feb/14-feb-1.jpg)
 ![Alt text](Trello/Kat/wed-14-feb/14-feb-2.jpg)
 ![Alt text](Trello/Kat/wed-14-feb/14-feb-3.jpg)
 
+### Thursday 15 Feb
+![Alt text](Trello/Alice/15022024AT.JPG)
+![Alt text](Trello/Alice/15022024AT1.JPG)
 
 # References 
 GeeksforGeeks. (n.d.). Levels in Data Flow Diagrams (DFD). Available at: https://www.geeksforgeeks.org/levels-in-data-flow-diagrams-dfd/
