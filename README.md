@@ -4,7 +4,7 @@ A full stack web application by **Alice Tram, Katrice Mountford & Ali Eideh**
 
 ## Links
 - [Backend Github Repo](https://github.com/alicetra/Plant-Forum-Backend)
-- Frontend Github Repo
+- [Frontend Github Repo](https://github.com/kvtrice/sproutly-frontend)
 
 # Table of Contents
 - [General](#general)
@@ -24,82 +24,65 @@ A full stack web application by **Alice Tram, Katrice Mountford & Ali Eideh**
 
 ## Purpose
 
-Plant enthusiasts currently engage in fragmented online communities focused on various plant-related topics. However, there isn’t a dedicated platform that serves as a comprehensive hub for all things plants, similar to how Goodreads caters to book enthusiasts or IMDB to movie lovers. People often follow multiple Facebook groups like ‘Plant Identification Australia’ and ‘Plant lovers Melbourne Victoria’ and may also participate in subreddits such as r/houseplants and r/UrbanJungle. This disjointed community spans across different platforms. Addtionally a study by CivicScience reveals that Millennials and Gen Z's in the plant community emerge as a prevalent target audience, with 21% of these generational cohorts identifying as plant parents, deriving joy from nurturing plants. KUNR Public Radio's report underscores how houseplant popularity flourished during the pandemic an upsurge largely attributable to social media exposure through the generations most used platform such as Tiktok where Gen Z and millennial are the dominent users. 
+Plant enthusiasts currently engage in fragmented online communities focused on various plant-related topics. However, there isn’t a dedicated platform that serves as a comprehensive hub for all things plants, similar to how Goodreads caters to book enthusiasts or IMDB to movie lovers. 
 
-We want our site to be therefore specifically targeted towards this younger age group through aesthetics and functionality.
+Through research and our own experience, many plant-lovers follow multiple different Facebook groups (such as ‘Plant Identification Australia’ or ‘Plant lovers Melbourne Victoria’) and then they also participate in forums in other places such as reddit (for example: r/houseplants and r/UrbanJungle). Based on this it's clear that people want to be able to talk about their plants and discuss plant-related topics, but they have to go to various other platforms in order to do so (facebook, reddit etc.), wouldn't it be easier if this could be done from a single platform?
+
+Sproutly is a solution to this problem, providing a unified forum platform where people can share their love of plants, ask questions and get plant help when they need it from others in the community.
 
 ## Functionality and Features
 **Login and Sign up**
 - New users are able to create a new account/profile
 - Existing users are able to log in to their existing account using their username and password
 
-**User data CRUD**
-- Users are able to view and update their account details as well as delete their accounts
+**User Data**
+- Users that are logged in are able to view and update their account details (name, username, password, profile picture) as well as delete their account.
+- Users that are logged in will be able to have a unified view of their previous post and comment history.
 
-**Threads**
-- Users that are logged in are able to start a thread through craeting a new post with a title and content body. 
+**Thread Posts and Comments**
+- Users that are logged in are able to start a thread through **creating a new post** with a title, content body and optional image
+- Users that are logged in are able to comment on threads (content body). If a user is not logged in they are unable to comment on thread posts.
+- All users (logged in or not logged in), will be able to **view** threads and their associated comments and images
+- Users that are logged in are able to **edit** and **delete** their own comments and thread posts.
+- All users are able to view the number of comments currently on a thread post.
 
-**Commenting** 
-- Users that are logged in are able to comment on threads (content body).
+**Search and filtering**
+- All Users ware able to search threads universally by tags.
+- All users are able to filter their homepage by date. This will be a limited choice between either ascending or descending order. This functionality also extends to comments on thread posts.
 
-**Filtering** 
-- All users (anonymous/lurkers included) are able to filter their homepage by by dates the comments and threads posts (ascending and descending).
 
-**Search**
-- All Users would have the ability to search threads by tags.
-
-**Pictures**
-- Log-in Users would be allow to include pictures in their posts.
-
-**Edit/Deleting**
-- Log-in Users would be allow to edit their post and delete their comments.
-
-**Reacting**
-- Log-in Users would be able to react to comments and threads.
+**Reactions**
+- Users that are logged in are able to react (e.g. 'like') to comments and thread posts.
+- All users are able to view the number of reactions on a given thread post or comment.
 
 **Infinite scroll**
-- For better user experience we will implement an infinite scroll feature instead of pages.
-
-**View**
-- All users, will be able to view threads and comments.
-
-**Likes and comment counts**
- - All users would be able to view how many upvote/like a threads has and how many comments is in that thread.
+- To enahnce the user experience we will implement an infinite scroll feature on the user home page rather than pagination. This is in line with current industry standards and is a common user flow in similar applications in the market today.
 
 
 ## Target Audience
 
-Our target audience is comprise of Millennials and Gen Z. This is a dynamic and tech-savvy group. 
+Given our purpose, our application is targeted towards those in the plant community, but additionally aimed towards Millennial and Gen-Z users.
 
-**Millennials (born roughly between 1981 and 1996)**:
-- Tech-Fluent: Millennials grew up alongside the internet and digital technology. They are comfortable navigating online platforms and expect seamless user experiences.
-- Experience-Driven: Millennials prioritise meaningful interactions and personalised content.
-- Diverse Interests: Millennials engaged in various hobbies and interests. Their plant enthusiasm is an extension of their desire for connection with nature and their well-being.
+In the past caring for plants was largely a hobby loved by older generations, and many platforms or forums that exist today are aimed towards that demographic. However since the COVID pandemic a younger audience has started to develop a love for plants, with a study by CivicScience showing that 21% of millenial and gen-z cohorts identify as 'plant parents'. 
 
-**Gen Z (born roughly between 1997 and 2012)**:
-- Digital Natives: Gen Z was born into a fully digital world. They are adept at using social media, apps, and online communities.
-- Visual Content Consumers: Gen Z responds well to visual content, such as images and infographics. Incorporating visual elements into our platform will resonate with them.
+For this reason, along with the fact that both groups are highly active and engaged in online communities in general, Sproutly will be aimed towards those aged roughly between 18 - 40. In order to make our application attractive to our target audience we're going to place a high emphasis on bold and bright colours, modern UI components, interactivity and accessibility.
 
-Both Generation share a common trait in that they are socially engaged and participates in online discussions. 
 
 ## Tech Stack
 
-We will be using the MERN stack to create our application. Here are the MERN stack components:
+We will be using the MERN stack to create our application, which includes:
 
-**MongoDB**: Serves as the database in the MERN stack.  
-Description: It is a non-relational database that excels at handling flexible data stored in JSON-like documents. MongoDB allows storage, retrieval, and manipulation of data.
+#### MongoDB
+MongoDB serves as the database in the MERN stack, it's non-relational and excels at handling flexible data stored in JSON-like documents. MongoDB facilitates storage, retrieval, and manipulation of data which is crucial for our full stack applciation to work smoothly.
 
+#### Express.js 
+Express.js is a lightweight server-side framework. In particular it helps to simplify tasks such as routing, middleware handling, and request/response management. We will be using it to create our backend APIs and handle HTTP requests.
 
-**Express.js**: The server-side framework in the MERN stack.  
-Description: It provides a lightweight and efficient way to build web applications. Express simplifies tasks like routing, middleware handling, and request/response management. We will be using it to create backend APIs and handle HTTP requests.
+#### React
+React is a frontend Javascript library that will enable us to build dynamic user interfaces. It facilitates the creation of reusable components, helps to manage state within the application, and efficiently updates the UI based on data changes. We will be using it to build our front-end web page, which will ultimately be a single-page application (SPA) where components will update without page reloads. 
 
-
-**React**: The front-end library in the MERN stack.  
-Description: React is a powerful JavaScript library for building dynamic user interfaces. It allows developers to create reusable components, manage state, and efficiently update the UI based on data changes. We will be using it to build our front-end interactive web page and we will adhered to a single-page application (SPAs) where components will update without page reloads.   
-
-
-**Node.js**: Serves as the runtime environment for the MERN stack.  
-Description: Node.js is a server-side JavaScript runtime that enables running JavaScript code outside the browser. It provides an event-driven, non-blocking  model, making it efficient for handling concurrent requests. Nodes will be used with Express.js to help us develop our server-side tasks.
+#### Node.js
+Node.js is a server-side JavaScript runtime that enables the running of JavaScript code outside of a web browser. It provides an event-driven, non-blocking model, making it efficient for handling asynchronous requests. Node.js will be used alongside Express.js to help develop our server-side tasks.
 
 # Data Flow Diagrams
 We developed a Level 0 Data Flow Diagram (DFD) in the context of our project to provide an overarching view of our data. This highest level DFD represents major processes, data flows, and database within the system without delving into their intricate details.
@@ -134,6 +117,22 @@ Please note that for readability, the ouput back to user wasn't shown in this ov
 
 Link to live board
 
+### Monday 12 Feb
+![Alt text](Trello/Kat/mon-12-feb/12-feb-1.jpg)
+![Alt text](Trello/Kat/mon-12-feb/12-feb-2.jpg)
+![Alt text](Trello/Kat/mon-12-feb/12-feb-3.jpg)
+![Alt text](Trello/Kat/mon-12-feb/12-feb-4.jpg)
+![Alt text](Trello/Kat/mon-12-feb/12-feb-5.jpg)
+![Alt text](Trello/Kat/mon-12-feb/12-feb-6.jpg)
+
+### Tuesday 13 Feb
+![Alt text](Trello/Kat/tue-13-feb/13-feb-1.jpg)
+![Alt text](Trello/Kat/tue-13-feb/13-feb-2.jpg)
+
+### Wednesday 14 Feb
+![Alt text](Trello/Kat/wed-14-feb/14-feb-1.jpg)
+![Alt text](Trello/Kat/wed-14-feb/14-feb-2.jpg)
+![Alt text](Trello/Kat/wed-14-feb/14-feb-3.jpg)
 
 
 # References 
