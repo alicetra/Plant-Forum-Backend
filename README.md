@@ -36,14 +36,14 @@ Sproutly is a solution to this problem, providing a unified forum platform where
 - Existing users are able to log in to their existing account using their username and password
 
 **User Data**
-- Users that are logged in are able to view and update their account details (name, username, password, profile picture) as well as delete their account.
+- Users that are logged in are able to view and update their account details (name, username, password, profile picture).
 - Users that are logged in will be able to have a unified view of their previous post and comment history.
 
 **Thread Posts and Comments**
 - Users that are logged in are able to start a thread through **creating a new post** with a title, content body and optional image
 - Users that are logged in are able to comment on threads (content body). If a user is not logged in they are unable to comment on thread posts.
 - All users (logged in or not logged in), will be able to **view** threads and their associated comments and images
-- Users that are logged in are able to **edit** and **delete** their own comments and thread posts.
+- Users that are logged in are able to **edit** and their own comments and thread posts.
 - All users are able to view the number of comments currently on a thread post.
 
 **Search and filtering**
@@ -56,8 +56,10 @@ Sproutly is a solution to this problem, providing a unified forum platform where
 - All users are able to view the number of reactions on a given thread post or comment.
 
 **Infinite scroll**
-- To enahnce the user experience we will implement an infinite scroll feature on the user home page rather than pagination. This is in line with current industry standards and is a common user flow in similar applications in the market today.
+- To enhance the user experience we will implement an infinite scroll feature on the user home page rather than pagination. This is in line with current industry standards and is a common user flow in similar applications in the market today.
 
+**Dark Mode**
+- To enhance user experience and prevent eyestrain we will implement a dark mode option which is a very popular web design feature.
 
 ## Target Audience
 
@@ -89,16 +91,16 @@ We developed a Level 0 Data Flow Diagram (DFD) in the context of our project to 
 
 The need for flexibility drives our choice to utilize a Level 0 DFD: we aim to grasp the data flow model broadly, without fixating on specific details. This strategic approach accommodates potential changes—likely during the upcoming production phase.
 
-**Please click on the individual pictures and zoom if at any point it is hard to read. Note that the last diagram is a SVG so open in live server to view. If you are viewing this in a laptop the full diagram might not be shown unless you click on that image.**
+**Note that most diagrams are SVG so open in live server to view. If you are viewing this on a laptop the full diagram might not be shown unless you click on the SVG file. Please click on any pictures to zoom and view if needed**
 
 ### Individual functions data flow system
-![Alt text](Dataflow/Comment.PNG)
+![Alt text](Dataflow/Comment.svg)
 ![Alt text](Dataflow/Filtering.PNG)
 ![Alt text](Dataflow/Liking.PNG)
 ![Alt text](Dataflow/Picture.PNG)
-![Alt text](Dataflow/Thread.PNG)
-![Alt text](Dataflow/User.PNG)
-![Alt text](Dataflow/View.PNG)
+![Alt text](Dataflow/Thread.svg)
+![Alt text](Dataflow/User.svg)
+![Alt text](Dataflow/View.svg)
 
 ### Overarching project dataflow 
 
