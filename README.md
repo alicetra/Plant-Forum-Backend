@@ -119,7 +119,7 @@ Please note that for readability, the ouput back to user wasn't shown in this ov
 
 ## *Initial User Stories*
 
-Described as a means to capture, design and shape the core features of Sproutly from the perspective of the end user, user stories as well as associated forum personas were initially fleshed out in a brainstorming session centred around the user experience and tropes related to gardening and plant keeping. Group members' personal experiences of using forums and discussion boards provided the impetus for the initial set od user stories which as of *February 13* list as follows: 
+Described as a means to capture, design and shape the core features of Sproutly from the perspective of the end user, user stories as well as associated forum personas were initially fleshed out in a brainstorming session centred around the user experience and tropes related to gardening and plant keeping. Group members' personal experiences of using forums and discussion boards provided the impetus for the initial set of user stories which as of *February 13* list as follows: 
 
 #### Forum Browser/ 'Lurker':
 
