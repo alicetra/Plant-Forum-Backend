@@ -113,7 +113,94 @@ Please note that for readability, the ouput back to user wasn't shown in this ov
 
 # Application Architecture Diagram
 
+![Alt text](Application-Architecture-Diagram/AAD-v2.png)
+
 # User Stories
+
+## *Initial User Stories*
+
+Described as a means to capture, design and shape the core features of Sproutly from the perspective of the end user, user stories as well as associated forum personas were initially fleshed out in a brainstorming session centred around the user experience and tropes related to gardening and plant keeping. Group members' personal experiences of using forums and discussion boards provided the impetus for the initial set od user stories which as of *February 13* list as follows: 
+
+#### Forum Browser/ 'Lurker':
+
+- As a user, I want to be able to view the forum without having to sign up or log in, so that I don't have to go through a tedious sign-up process.
+  
+- As a user, I want to be able to make observations about the forum without having to sign up or log in, so that I can decide if I want to join the community as I am still undecided.
+  
+- As a browser and information seeker who is without a need or desire to make their own contributions, I still would like to have access to the forum's full search functionality (tag seraching), so that I might obtain information I need for my purposes as well as access to user pages of registered community members whose advice and contributions I might like to shadow. 
+
+
+#### Prolific Poster/ 'Main Contributor':
+
+- As a user who is inclined towards frequently contributing to the community/posting and is a forum mainstay/part of the furniture type user, I would like to have access to a page which displays my post history that for posterity I might need to reference or for the purpose of self-reflection and improvement.
+
+
+#### Upvote Accumulator/ 'Karma Farmer':
+
+- As a user who is inclined towards garnering upvotes, I want to be able to  post frequently and exploit the tag functionality, so that I might appeal to as many community members as possible and maximise the value of my contributions.
+
+- As a Karma Farmer, I would like to have a user page which displays in a not unconspicuous section of the page my like total, which serves as a badge of honour and a display of my worth to the community. 
+
+<details>
+<summary><strong> General User Stories</strong></summary>
+
+- As a user, I want to be able to sign up and log in, so that I can access the full functionality of the forum and contribute to the community.
+
+- As a user, I want to be able to edit my posts, so that I can correct any mistakes I may have made, improve the quality of my content and keep my posts up to date. 
+  
+- As a user, I want to be able to delete my posts, so that I can remove any content I no longer wish to share with the community. This may be due to a change of heart, a change in the relevance of the content or a change in the accuracy of the content.
+
+- As a user, I want to be able to upvote posts, so that I can show my appreciation for content in the community and/or to increase the value of a particular contribution.
+
+- As a user, I want to be able to filter posts by tags so that I can find the information I need quickly and easily and so that I can find the most relevant information to me. 
+
+- As a user, I would like to change the display of the forum to a dark mode, so that I can reduce eye strain and improve my user experience. Vice versa, I would like to change the display of the forum to a light mode, so that I can improve the visibility of the forum according to my own personal preferences.
+
+- As a user, I would like to sort posts by date, so that I might keep up to date with popular and recent posts, be informed about community affairs and be able to find the most relevant information quickly and easily. Conversely, I would like to use this functionality to search through older posts to find material pertaining to a particular time period.
+
+- As a user, I would like to be able to create untagged posts on the fly, without having to navigate to a new page or scroll. This is so that I can create posts that are short and/or are not too complex, quickly and easily.
+
+- As a user who is detail oriented and who prioritises quality over quantity, I would like to carefully curate my posts on a dedicated page with access to more post creation tools such as image embedding and post tagging, to that end.
+
+-   As a detail oriented user, I would like in place a warning mechanism on the ceate post page which would provide me peace of mind in knowing my posts wont accidentally be discarded in the case of a misclick that might otherwise navigate me to a new page or clear the contents of my draft. This is so that I can focus on the quality of my content without fear of losing it. 
+
+- As a registered user, I would like to engage with the community in a way that is familiar and intuitive to me with dynamic page buttons/symbols which either like a post or direct me to comment on the post/thread, a feature common to social media platforms.
+
+- As a registered user, I would like to, where possible (i.e. non-thread starters), delete comments I have made on posts, so that I can remove any content I no longer wish to share with the community or which was posted egregiously/impulsively. Furthermore, I would like to protect my comment contributions from hasty decision making with an "are you sure?" prompt before the comment is deleted.
+
+- As a registered user, I would like to, where possible (i.e. non-thread starters), edit comments I have made on posts, so that I can correct any mistakes I may have made or improve the quality of my content.
+
+- As a prospective user of Sproutly (the name of the forum), I would like a straightforward and intuitive sign-up process, which in addition to necessary credentials asks for most a profile picture and the plants I own. This would encourage me to join the community and not be dissuaded by a lengthy sign-up process.
+
+</details>
+
+## *Refined User Stories*
+
+Upon discussion and further development of our ideas, the need to delineate specific terms (such as 'post' and 'comment' and 'thread') and produce concise user stories to reflect these allowed the group to produce a refined set of user stories which associate directly to the wireframed features detailed below and were described as follows on *February 16*:
+
+- As a *logged in user*, I want to able to access the forum's full functionality (react, comment, etc.), so that I can contribute to the Sproutly community directly.
+   
+- As a *browser*, I want full visibility of the forum's content (posts and threads) so that I can enjoy the full breadth of the community's contributions without having to sign up. 
+
+- As a *user*, I want to be able to filter thread posts by tags, so that I can filter content to my specific plants,interests and/or needs.
+
+- As a *logged in user*, I want to be able to create thread posts, so that I can contribute to the *Sproutly* community.
+
+- As a user with a *preference for content dense thread posting*, I want a 'discard post' alert box feature to mitigate losing my content to a misclick, so that I can focus on the quality of my content without fear of losing it. 
+
+-  As a *browser*, I want to be able to sort thread posts and comments by date, to scope out the most recent and/or most relevant content.
+
+- As a *logged in Sproutly user* who is familiar with social media functionality, I want to be able to comment on threads no matter how far I have scrolled, so that I can conveniently engage with thread posts in a manner intuitive to me.
+
+- As a *registered user of Sproutly*, I would like to be welcomed by a simple login page, so that I can jump straight into the forum with ease. 
+
+- As a *seasoned plant enthusiast* or *millenial plant newbie*, I would like to join the *Sproutly* community so that I can showcase my lineup of plants and/or demonstrate and share my plant caring expertise.
+
+- As a *registered Sproutly user*, I would like to be able to edit my profile on a dedicated page, in a manner familiar to me (i.e. exact fields and presentation of the sign-up page), so that I can keep my profile relevant and my plant keeping record up to date.
+
+- As a *registered Sproutly user* with a desire to delete my profile, I would like an option on the edit profile page to facilitate this, so that I can erase my data from the forum and leave the community if I so choose.
+
+- As a *browser* or *registered user* who is interested in a particular user's contributions, I would like to be able to view a page dedicated to their post history and total like count, so that I can view their contributions and engage more deeply with the community.
 
 # Wireframes
 
