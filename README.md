@@ -307,6 +307,9 @@ Link to live board
 ![Alt text](Trello/Alice/15022024AT.JPG)
 ![Alt text](Trello/Alice/15022024AT1.JPG)
 
+### Friday 16 Feb
+![Alt text](Trello/Kat/fri-16-feb/16-feb-1.jpg)
+
 # References 
 GeeksforGeeks. (n.d.). Levels in Data Flow Diagrams (DFD). Available at: https://www.geeksforgeeks.org/levels-in-data-flow-diagrams-dfd/
 
