@@ -210,17 +210,11 @@ All un-annotated wireframes can be found under `Wireframes/Original`
 
 The home page serves as the entry point to our website. All users will be able to view this page, however some menu items and functionality will be limited to only those that are logged in (such as reacting, commenting, edit / view profile)
 
-**Associated user stories:**
-- "As a ___ I want to __ so I can ___"
-
 ![Alt text](Wireframes/Annotated/1-home-logged-in.png)
 
 ### Home page for users that aren't logged in
 
 For users that have not signed up or are not logged in, they will still have full visibility of the forum posts and threads (so they can remain a 'browser'), but they will not be able to react to thread posts or add comments to thread posts. As such, some components and action items will be hidden from view.
-
-**Associated user stories:**
-- "As a ___ I want to __ so I can ___"
 
 ![Alt text](Wireframes/Annotated/2-home-not-logged-in.png)
 
@@ -228,17 +222,11 @@ For users that have not signed up or are not logged in, they will still have ful
 
 All users are able to search the forum based on searching for existing tags and adding the tags as search parameters. This filters the thread posts based on the selected tags for the user. One or more tags can be added to the search and the search will match to any matching tag (not *all* matching tags - it doesn't increase specificity).
 
-**Associated user stories:**
-- "As a ___ I want to __ so I can ___"
-
 ![Alt text](Wireframes/Annotated/3-home-tags.png)
 
 ### Creating a Post
 
 Users that are logged in will be able to create a thread post, either from the 'post something' homepage component or via the 'create post' button in the nav bar; both of which navigate to this create post component.
-
-**Associated user stories:**
-- "As a ___ I want to __ so I can ___"
 
 ![Alt text](Wireframes/Annotated/4-create-post.png)
 
@@ -246,17 +234,11 @@ Users that are logged in will be able to create a thread post, either from the '
 
 Users can discard a thread post if they no longer wish to continue; this will prompt for confirmation from the user before it is actioned.
 
-**Associated user stories:**
-- "As a ___ I want to __ so I can ___"
-
 ![Alt text](Wireframes/Annotated/5-create-post-discard-warning.png)
 
 ### Viewing threads
 
 All users are able to view threads, however 'browsers' have limited actions outside of 'viewing'.
-
-**Associated user stories:**
-- "As a ___ I want to __ so I can ___"
 
 ![Alt text](Wireframes/Annotated/6-thread-view.png)
 
@@ -264,18 +246,11 @@ All users are able to view threads, however 'browsers' have limited actions outs
 
 If the user is logged in, they are able to add new comments, edit comments and delete comments on thread posts.
 
-**Associated user stories:**
-- "As a ___ I want to __ so I can ___"
-
 ![Alt text](Wireframes/Annotated/7-thread-comment-functionality.png)
 
 ### User login
 
 The login page is where an existing user can enter their credentials to log back into their user account. This page can be accessed from the 'login' button in the navbar.
-
-**Associated user stories:**
-- "As a ___ I want to __ so I can ___"
-
 
 ![Alt text](Wireframes/Annotated/8-login.png)
 
@@ -283,26 +258,17 @@ The login page is where an existing user can enter their credentials to log back
 
 The signup page is where a new user can create a new account for Sproutly. This page can be accessed from the 'Join' button in the navbar.
 
-**Associated user stories:**
-- "As a ___ I want to __ so I can ___"
-
 ![Alt text](Wireframes/Annotated/9-signup.png)
 
 ### User edit profile
 
 Logged in users are able to edit their user details through clicking either the profile picture icon (desktop) or the 'edit profile' button in the nav bar.
 
-**Associated user stories:**
-- "As a ___ I want to __ so I can ___"
-
 ![Alt text](Wireframes/Annotated/10-edit-profile.png)
 
 ### User view profile
 
 All users are able to view another users public profile through clicking on their username (via a thread post or comment). If a user is logged in, they are also able to navigate to view their own public profile through clicking on the profile picture icon (desktop) or the 'view profile' button in the nav bar. 
-
-**Associated user stories:**
-- "As a ___ I want to __ so I can ___"
 
 ![Alt text](Wireframes/Annotated/11-view-profile.png)
 
