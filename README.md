@@ -113,6 +113,10 @@ Please note that for readability, the ouput back to user wasn't shown in this ov
 
 # Application Architecture Diagram
 
+The Application Architecture Diagram (AAD) provides a high-level overview of the system's architecture. *Sproutly* is a MERN, full-stack implementation. On the backend, the application is powered by a Node.js server running Express.js, which interfaces with a NoSQL MongoDB database. The frontend is built using React, rendering various UI components dynamically, including HTML, CSS and embedded JavaScript. React communicates with the backend via HTTP requests which via Express.js will facilitate Restful API calls. The application's frontend and backend are hosted on separate servers, with the frontend hosted on Netlify and the backend to be hosted on Render. With respect to the database, MongoDB Atlas will be the cloud service hosting it. The database itself interfaces with the Node.js backend server via the Object Data Modelling (ODM) library, Mongoose. 
+
+<br>
+
 ![Alt text](Application-Architecture-Diagram/AAD-v2.png)
 
 # User Stories
