@@ -5,7 +5,7 @@ const user = [
     {
         username: "test1",
         password: "test1234",
-        plants: ["Monstera", "Money tree"],
+        plants: ["Monstera", "ZZ plant"],
         profilePicture: "https://cdn.shopify.com/s/files/1/0997/4496/articles/shutterstock_597959525_07dcd775-31fc-4a78-b42a-4fffa0febd35.jpg?v=1588963145"
     },
     {
