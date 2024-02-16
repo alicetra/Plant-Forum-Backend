@@ -32,6 +32,11 @@ const postsSchema = new mongoose.Schema({
         type: [String],
         required: true, 
         enum: plants },
+    // an array of userIDs object of users who have liked the post
+    reactions: [ {
+        type: mongoose.ObjectId, 
+        ref: 'User'}
+    ] 
 })
 
 // Post Model
