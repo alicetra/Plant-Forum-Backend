@@ -18,6 +18,18 @@ const usersSchema = new mongoose.Schema({
       match: /[^\s]/,
       required: true,
       minlength: 8,
+    },
+
+    plants: {
+      // insert an array of strings aka plants name
+      type: [String],
+      required: true,
+    },
+
+    profilePicture: {
+      // it would be the url of the image
+      type: String,
+      required: true,
     }
 })
 
