@@ -1,19 +1,18 @@
-
 import mongoose from 'mongoose'
 
 //setting our plants selections that user can pick from that they have 
-const plants = ['Snake plant', 'Monstera', 'ZZ plant']
+export const plants = ['Snake plant', 'Monstera', 'ZZ plant']
 
 const usersSchema = new mongoose.Schema({
     username: { 
-    type : String,
-    // Even though I set type to string I have to include cast to false or else it will cast integer input to string and accept it as a valid input 
-    cast:false,
-    // Match any character except white-space eg (line breaks, tabs, spaces, hard spaces)
-    match: /[^\s]/,
-    required: true,
-    unique:true,
-    minlength: 3},
+      type : String,
+      // Even though I set type to string I have to include cast to false or else it will cast integer input to string and accept it as a valid input 
+      cast:false,
+      // Match any character except white-space eg (line breaks, tabs, spaces, hard spaces)
+      match: /[^\s]/,
+      required: true,
+      unique:true,
+      minlength: 3},
     
     password: {
       type: String,
@@ -40,4 +39,4 @@ const usersSchema = new mongoose.Schema({
 
 const UserModel = mongoose.model('User', usersSchema)
 
-export default UserModel
+export default UserModel 
