@@ -1,12 +1,13 @@
 import mongoose from "mongoose"
-import { plants } from "models/users.js"
+import { plants } from "./users.js"
 
 // Posts Schema
 const postsSchema = new mongoose.Schema({
     createdDateTime: { 
-        type: Date, 
+        type: Date,
+        default: Date.now, 
         required: true },
-    userID: { 
+    user: { 
         type: mongoose.ObjectId, 
         ref: 'User' },
     title: { 
@@ -17,9 +18,10 @@ const postsSchema = new mongoose.Schema({
         required: true },
     image: { 
         type: String },
-    parent: { 
+    parentID: { 
         type: mongoose.ObjectId, 
-        ref: 'Post'},
+        ref: 'Post',
+        default: null},
     isThreadStarter: { 
         type: Boolean, 
         required: true },
