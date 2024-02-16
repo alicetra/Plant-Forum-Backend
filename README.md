@@ -93,22 +93,22 @@ The need for flexibility drives our choice to utilize a Level 0 DFD: we aim to g
 
 **Note that diagrams are SVG so open in live server to view if you are reading this as a MD file. If you are viewing this from the github depo on a laptop the full diagram might not be shown unless you click on the SVG file. Feel free to zoom in of any diagram**
 
-![Alt text](Dataflow/Legend.PNG)
+![Alt text](docs/part-a/Dataflow/Legend.PNG)
 
 ### Individual functions data flow system
-![Alt text](Dataflow/Comment.svg)
-![Alt text](Dataflow/Filtering.svg)
-![Alt text](Dataflow/Liking.svg)
-![Alt text](Dataflow/Picture.svg)
-![Alt text](Dataflow/Thread.svg)
-![Alt text](Dataflow/User.svg)
-![Alt text](Dataflow/View.svg)
+![Alt text](docs/part-a/Dataflow/Comment.svg)
+![Alt text](docs/part-a/Dataflow/Filtering.svg)
+![Alt text](docs/part-a/Dataflow/Liking.svg)
+![Alt text](docs/part-a/Dataflow/Picture.svg)
+![Alt text](docs/part-a/Dataflow/Thread.svg)
+![Alt text](docs/part-a/Dataflow/User.svg)
+![Alt text](docs/part-a/Dataflow/View.svg)
 
 ### Overarching project dataflow 
 
 Please note that for readability, the ouput back to user wasn't shown in this overarching diagram. Please look at the indivudal functions dataflow (above) to view that flow back to user if needed.
 
-![Alt text](Dataflow/Combine.svg)
+![Alt text](docs/part-a/Dataflow/Combine.svg)
 
 
 # Application Architecture Diagram
@@ -117,7 +117,7 @@ The Application Architecture Diagram (AAD) provides a high-level overview of the
 
 <br>
 
-![Alt text](Application-Architecture-Diagram/AAD-v2.png)
+![Alt text](docs/part-a/Application-Architecture-Diagram/AAD-v2.png)
 
 # User Stories
 
@@ -214,105 +214,105 @@ All un-annotated wireframes can be found under `Wireframes/Original`
 
 The home page serves as the entry point to our website. All users will be able to view this page, however some menu items and functionality will be limited to only those that are logged in (such as reacting, commenting, edit / view profile)
 
-![Alt text](Wireframes/Annotated/1-home-logged-in.png)
+![Alt text](docs/part-a/Wireframes/Annotated/1-home-logged-in.png)
 
 ### Home page for users that aren't logged in
 
 For users that have not signed up or are not logged in, they will still have full visibility of the forum posts and threads (so they can remain a 'browser'), but they will not be able to react to thread posts or add comments to thread posts. As such, some components and action items will be hidden from view.
 
-![Alt text](Wireframes/Annotated/2-home-not-logged-in.png)
+![Alt text](docs/part-a/Wireframes/Annotated/2-home-not-logged-in.png)
 
 ### Searching based on Tags
 
 All users are able to search the forum based on searching for existing tags and adding the tags as search parameters. This filters the thread posts based on the selected tags for the user. One or more tags can be added to the search and the search will match to any matching tag (not *all* matching tags - it doesn't increase specificity).
 
-![Alt text](Wireframes/Annotated/3-home-tags.png)
+![Alt text](docs/part-a/Wireframes/Annotated/3-home-tags.png)
 
 ### Creating a Post
 
 Users that are logged in will be able to create a thread post, either from the 'post something' homepage component or via the 'create post' button in the nav bar; both of which navigate to this create post component.
 
-![Alt text](Wireframes/Annotated/4-create-post.png)
+![Alt text](docs/part-a/Wireframes/Annotated/4-create-post.png)
 
 ### Discarding a post
 
 Users can discard a thread post if they no longer wish to continue; this will prompt for confirmation from the user before it is actioned.
 
-![Alt text](Wireframes/Annotated/5-create-post-discard-warning.png)
+![Alt text](docs/part-a/Wireframes/Annotated/5-create-post-discard-warning.png)
 
 ### Viewing threads
 
 All users are able to view threads, however 'browsers' have limited actions outside of 'viewing'.
 
-![Alt text](Wireframes/Annotated/6-thread-view.png)
+![Alt text](docs/part-a/Wireframes/Annotated/6-thread-view.png)
 
 ### Commenting on threads
 
 If the user is logged in, they are able to add new comments, edit comments and delete comments on thread posts.
 
-![Alt text](Wireframes/Annotated/7-thread-comment-functionality.png)
+![Alt text](docs/part-a/Wireframes/Annotated/7-thread-comment-functionality.png)
 
 ### User login
 
 The login page is where an existing user can enter their credentials to log back into their user account. This page can be accessed from the 'login' button in the navbar.
 
-![Alt text](Wireframes/Annotated/8-login.png)
+![Alt text](docs/part-a/Wireframes/Annotated/8-login.png)
 
 ### User sign up
 
 The signup page is where a new user can create a new account for Sproutly. This page can be accessed from the 'Join' button in the navbar.
 
-![Alt text](Wireframes/Annotated/9-signup.png)
+![Alt text](docs/part-a/Wireframes/Annotated/9-signup.png)
 
 ### User edit profile
 
 Logged in users are able to edit their user details through clicking either the profile picture icon (desktop) or the 'edit profile' button in the nav bar.
 
-![Alt text](Wireframes/Annotated/10-edit-profile.png)
+![Alt text](docs/part-a/Wireframes/Annotated/10-edit-profile.png)
 
 ### User view profile
 
 All users are able to view another users public profile through clicking on their username (via a thread post or comment). If a user is logged in, they are also able to navigate to view their own public profile through clicking on the profile picture icon (desktop) or the 'view profile' button in the nav bar. 
 
-![Alt text](Wireframes/Annotated/11-view-profile.png)
+![Alt text](docs/part-a/Wireframes/Annotated/11-view-profile.png)
 
 # Trello Board
 
 Link to live board
 
 ### Friday 9 Feb
-![Alt text](Trello/Alice/09022024AT1.JPG)
-![Alt text](Trello/Alice/09022024AT2.JPG)
+![Alt text](docs/part-a/Trello/Alice/09022024AT1.JPG)
+![Alt text](docs/part-a/Trello/Alice/09022024AT2.JPG)
 
 ### Monday 12 Feb
-![Alt text](Trello/Kat/mon-12-feb/12-feb-1.jpg)
-![Alt text](Trello/Kat/mon-12-feb/12-feb-2.jpg)
-![Alt text](Trello/Kat/mon-12-feb/12-feb-3.jpg)
-![Alt text](Trello/Kat/mon-12-feb/12-feb-4.jpg)
-![Alt text](Trello/Kat/mon-12-feb/12-feb-5.jpg)
-![Alt text](Trello/Kat/mon-12-feb/12-feb-6.jpg)
-![Alt text](Trello/Alice/120224AT.JPG)
-![Alt text](Trello/Alice/12022024AT1.JPG)
-![Alt text](Trello/Alice/12022024AT2.JPG)
+![Alt text](docs/part-a/Trello/Kat/mon-12-feb/12-feb-1.jpg)
+![Alt text](docs/part-a/Trello/Kat/mon-12-feb/12-feb-2.jpg)
+![Alt text](docs/part-a/Trello/Kat/mon-12-feb/12-feb-3.jpg)
+![Alt text](docs/part-a/Trello/Kat/mon-12-feb/12-feb-4.jpg)
+![Alt text](docs/part-a/Trello/Kat/mon-12-feb/12-feb-5.jpg)
+![Alt text](docs/part-a/Trello/Kat/mon-12-feb/12-feb-6.jpg)
+![Alt text](docs/part-a/Trello/Alice/120224AT.JPG)
+![Alt text](docs/part-a/Trello/Alice/12022024AT1.JPG)
+![Alt text](docs/part-a/Trello/Alice/12022024AT2.JPG)
 
 ### Tuesday 13 Feb
-![Alt text](Trello/Kat/tue-13-feb/13-feb-1.jpg)
-![Alt text](Trello/Kat/tue-13-feb/13-feb-2.jpg)
-![Alt text](Trello/Alice/13022024AT.JPG)
-![Alt text](Trello/Alice/13022024AT1.JPG)
-![Alt text](Trello/Alice/1302204AT2.JPG)
+![Alt text](docs/part-a/Trello/Kat/tue-13-feb/13-feb-1.jpg)
+![Alt text](docs/part-a/Trello/Kat/tue-13-feb/13-feb-2.jpg)
+![Alt text](docs/part-a/Trello/Alice/13022024AT.JPG)
+![Alt text](docs/part-a/Trello/Alice/13022024AT1.JPG)
+![Alt text](docs/part-a/Trello/Alice/1302204AT2.JPG)
 
 ### Wednesday 14 Feb
-![Alt text](Trello/Kat/wed-14-feb/14-feb-1.jpg)
-![Alt text](Trello/Kat/wed-14-feb/14-feb-2.jpg)
-![Alt text](Trello/Kat/wed-14-feb/14-feb-3.jpg)
+![Alt text](docs/part-a/Trello/Kat/wed-14-feb/14-feb-1.jpg)
+![Alt text](docs/part-a/Trello/Kat/wed-14-feb/14-feb-2.jpg)
+![Alt text](docs/part-a/Trello/Kat/wed-14-feb/14-feb-3.jpg)
 
 ### Thursday 15 Feb
-![Alt text](Trello/Alice/15022024AT.JPG)
-![Alt text](Trello/Alice/15022024AT1.JPG)
+![Alt text](docs/part-a/Trello/Alice/15022024AT.JPG)
+![Alt text](docs/part-a/Trello/Alice/15022024AT1.JPG)
 
 ### Friday 16 Feb
-![Alt text](Trello/Kat/fri-16-feb/16-feb-1.jpg)
+![Alt text](docs/part-a/Trello/Kat/fri-16-feb/16-feb-1.jpg)
 
 # References 
 GeeksforGeeks. (n.d.). Levels in Data Flow Diagrams (DFD). Available at: https://www.geeksforgeeks.org/levels-in-data-flow-diagrams-dfd/
