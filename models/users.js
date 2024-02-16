@@ -1,7 +1,7 @@
 import mongoose from 'mongoose'
 
 //setting our plants selections that user can pick from that they have 
-const plants = ['Snake plant', 'Monstera', 'ZZ plant']
+export const plants = ['Snake plant', 'Monstera', 'ZZ plant']
 
 const usersSchema = new mongoose.Schema({
     username: { 
@@ -39,4 +39,4 @@ const usersSchema = new mongoose.Schema({
 
 const UserModel = mongoose.model('User', usersSchema)
 
-export default UserModel
+export default UserModel 

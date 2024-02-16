@@ -2,7 +2,7 @@ import UserModel from './models/users.js'
 import PostModel from './models/post.js'
 import { connectToDatabase, closeConnection } from './db.js'
 
-const user = [
+const users = [
     {
         username: "test1",
         password: "test1234",
