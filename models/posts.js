@@ -10,7 +10,8 @@ const postsSchema = new mongoose.Schema({
     parent: { type: mongoose.ObjectId, ref: 'Post'},
     isThreadStarter: { type: Boolean, required: true },
     isComment: { type: Boolean, required: true },
-    tags: { type: Array }
+    tags: { type: Array },
+    reactions: [{ type: mongoose.ObjectId, ref: 'User' }]
 })
 
 // Post Model
