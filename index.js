@@ -1,10 +1,5 @@
-import express from 'express'
+import app from './app.js'
 
+const port = process.env.PORT || 4001
 
-
-
-const app = express()
-
-app.get('/', (req, res) => res.send({"info": "Welcome"}))
-
-app.listen(4001) 
+app.listen(port)
