@@ -1,5 +1,8 @@
 import mongoose from 'mongoose'
 
+//setting our plants selections that user can pick from that they have 
+const plants = ['Snake plant', 'Monstera', 'ZZ plant']
+
 const usersSchema = new mongoose.Schema({
     username: { 
     type : String,
@@ -17,6 +20,20 @@ const usersSchema = new mongoose.Schema({
       match: /[^\s]/,
       required: true,
       minlength: 8,
+    },
+
+    plants: {
+      // insert an array of strings aka plants name
+      type: [String],
+      required: true,
+      //if user provide in their array a plant name that is not in the plantEnum array it throws an error
+      enum: plants,
+    },
+
+    profilePicture: {
+      // it would be the url of the image
+      type: String,
+      required: true,
     }
 })
 
