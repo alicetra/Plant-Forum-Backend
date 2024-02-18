@@ -1,4 +1,5 @@
 import app from './app.js'
 
-app.listen(4001) 
+const port = process.env.PORT || 4001
 
+app.listen(port)
