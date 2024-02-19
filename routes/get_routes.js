@@ -1,8 +1,7 @@
 import { Router } from "express"
 import PostModel from '../models/posts.js'
-import { connectToDatabase } from '../db.js'
 
-connectToDatabase()
+
 const router = Router()
 
 router.get('/:id', async (req, res) => {
