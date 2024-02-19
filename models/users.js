@@ -30,7 +30,7 @@ export const plants = [
 	"String of pearls",
 	"Swiss cheese plant (Monstera deliciosa)",
 	"Umbrella tree",
-	"Venu flytrap",
+	"Venus flytrap",
 	"ZZ plant",
 ];
 
