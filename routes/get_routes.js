@@ -24,7 +24,13 @@ router.get('/:id', async (req, res) => {
     }
 })
 
-router.get('/', async (req, res) => res.send(await PostModel.find()))
+router.get('/', async (req, res) => {
+    try {
+        res.send(await PostModel.find())
+    } catch (err) {
+        res.status(500).send({ error: err.message })
+    }
+})
 
 
 export default router
