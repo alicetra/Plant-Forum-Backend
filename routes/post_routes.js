@@ -4,6 +4,7 @@ import PostModel from '../models/posts.js'
 
 const router = Router()
 
+// Route to get a single post / comment
 router.get('/:id', async (req, res) => {
     try {
         // req.params is an object that contains route parameter values
@@ -23,11 +24,24 @@ router.get('/:id', async (req, res) => {
     }
 })
 
+// Route to get all posts
 router.get('/', async (req, res) => {
     try {
         res.send(await PostModel.find())
     } catch (err) {
         res.status(500).send({ error: err.message })
+    }
+})
+
+
+// Route to create a new post / comment
+router.post('/', async (req, res) => {
+    try {
+        const createdPost = await (((await PostModel.create(req.body)).populate('user')))
+        res.status(201).send(createdPost)
+    }
+    catch (err) {
+        res.status(400).send({error: err.message})
     }
 })
 
