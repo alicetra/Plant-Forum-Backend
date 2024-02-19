@@ -45,7 +45,7 @@ const posts = [
         isComment: false,
         tags: ["Monstera"],
         // I have to grab the index of the users because I don't know the userID from the seeding file as of yet but in practice in the route we will just input the userID 
-        reactions: [newUsers[0]._i, newUsers[2]._id]
+        reactions: [newUsers[0]._id, newUsers[2]._id]
     },
     {
         user: newUsers[0]._id,
