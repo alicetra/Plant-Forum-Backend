@@ -37,7 +37,7 @@ router.get('/', async (req, res) => {
 // Route to create a new post / comment
 router.post('/', async (req, res) => {
     try {
-        const createdPost = await (((await PostModel.create(req.body)).populate('user', '-password')))
+        const createdPost = await (((await PostModel.create(req.body)).populate('user', '-password -plants')))
         res.status(201).send(createdPost)
     }
     catch (err) {
