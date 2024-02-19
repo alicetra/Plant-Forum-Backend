@@ -5,11 +5,11 @@ import { plants } from "./users.js"
 const postsSchema = new mongoose.Schema({
     createdDateTime: { 
         type: Date,
-        default: Date.now, 
-        required: true },
+        default: Date.now},
     user: { 
         type: mongoose.ObjectId, 
-        ref: 'User' },
+        ref: 'User',
+        required: true},
     title: { 
         type: String, 
         required: true },
