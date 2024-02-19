@@ -1,13 +1,13 @@
-import PostModel from '../models/posts.js'
+// import PostModel from '../models/posts.js'
 
-// Route to create a new post or comment
+// // Route to create a new post or comment
 
-export const createNewPostComment = async (req, res) => {
-    try {
-        const createdPost = await ((await PostModel.create(req.body)).populate('user'))
-        res.status(201).send(createdPost)
-    }
-    catch (err) {
-        res.status(400).send({error: err.message})
-    }
-}
+// export const createNewPostComment = async (req, res) => {
+//     try {
+//         const createdPost = await ((await PostModel.create(req.body)))
+//         res.status(201).send(createdPost)
+//     }
+//     catch (err) {
+//         res.status(400).send({error: err.message})
+//     }
+// }
