@@ -1,7 +1,38 @@
 import mongoose from 'mongoose'
 
 //setting our plants selections that user can pick from that they have 
-export const plants = ['Snake plant', 'Monstera', 'ZZ plant']
+export const plants = [
+	"Aloe vera",
+	"Birds nest fern",
+	"Boston fern",
+	"Calathea",
+	"Cast iron plant",
+	"Chinese evergreen",
+	"Devils ivy (Pothos)",
+	"Dragon tree (Dracaena)",
+	"English Ivy",
+	"Fiddle leaf fig",
+	"Flamingo lily (Anthurium)",
+	"Jade plant",
+	"Kentia palm",
+	"Lavender",
+	"Lucky bamboo",
+	"Maidenhair fern",
+	"Money tree (Pachira aquatica)",
+	"Monstera",
+	"Orchid",
+	"Peace lily",
+	"Philodendren",
+	"Prayer plant (Maranta)",
+	"Rubber plant (Ficus elastica)",
+	"Snake plant (Sansevieria)",
+	"Spider plant",
+	"String of pearls",
+	"Swiss cheese plant (Monstera deliciosa)",
+	"Umbrella tree",
+	"Venu flytrap",
+	"ZZ plant",
+];
 
 const usersSchema = new mongoose.Schema({
     username: { 
