@@ -11,8 +11,7 @@ const postsSchema = new mongoose.Schema({
         ref: 'User',
         required: true},
     title: { 
-        type: String, 
-        required: true },
+        type: String},
     content: {
         type: String, 
         required: true },
