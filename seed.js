@@ -41,7 +41,7 @@ const posts = [
         user: newUsers[1]._id,
         title: "How to test fertiliser?",
         content: "What tools does everyone use to test fertiliser, I need some recommendations pls",
-        isThreadStarter: false,
+        isThreadStarter: true,
         isComment: false,
         tags: ["Monstera"],
         // I have to grab the index of the users because I don't know the userID from the seeding file as of yet but in practice in the route we will just input the userID 
@@ -52,7 +52,7 @@ const posts = [
         title: "How can I save this leaf?",
         content: "I don't understand why it's dying - help!!",
         image: "https://images.pexels.com/photos/1407305/pexels-photo-1407305.jpeg",
-        isThreadStarter: true,
+        isThreadStarter: false,
         isComment: true,
         tags: ["Monstera"],
         reactions: [newUsers[1]._id,newUsers[2]._id]
