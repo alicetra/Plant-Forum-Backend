@@ -1,5 +1,5 @@
 import mongoose from "mongoose"
-import { plants } from "./users.js"
+import UserModel from "./users.js"
 
 // Posts Schema
 const postsSchema = new mongoose.Schema({
@@ -39,7 +39,7 @@ const postsSchema = new mongoose.Schema({
         type: [String],
         required: true, 
         // If user chooses a plant name that is not in the plantEnum array it throws an error
-        enum: plants },
+     },
     // An array of userID objects of thos that have liked the post
     reactions: [ {
         type: mongoose.ObjectId, 
