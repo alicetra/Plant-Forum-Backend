@@ -1,9 +1,7 @@
 import { Router } from "express"
 import PostModel from '../models/posts.js'
 
-
 const router = Router()
-
 
 // route to ammend the fields of a single post
 router.put('/:id', async (req, res) => {
@@ -26,7 +24,7 @@ router.put('/:id', async (req, res) => {
 })
 
 
-// Route to get a single post / comment
+// Route to get a single post / comment 
 router.get('/:id', async (req, res) => {
     try {
         const entry = await PostModel.findById(req.params.id).populate('user')
@@ -62,5 +60,6 @@ router.post('/', async (req, res) => {
     }
 })
 
-
 export default router
+
+//trying to fix populate
