@@ -27,7 +27,7 @@ router.put('/:id', async (req, res) => {
 // Route to get a single post / comment
 router.get('/:id', async (req, res) => {
     try {
-        const entry = await PostModel.findById(req.params.id)
+        const entry = await PostModel.findById(req.params.id).populate('user')
         if(entry){
             res.send(entry)
         } else {
@@ -42,7 +42,7 @@ router.get('/:id', async (req, res) => {
 // Route to get all posts
 router.get('/', async (req, res) => {
     try {
-        res.send(await PostModel.find())
+        res.send(await PostModel.find().populate('user'))
     } catch (err) {
         res.status(500).send({ error: err.message })
     }
