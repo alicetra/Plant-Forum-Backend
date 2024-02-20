@@ -1,6 +1,9 @@
 import { Router } from "express"
 import PostModel from '../models/posts.js'
 
+
+
+
 const router = Router()
 
 // route to ammend the fields of a single post
@@ -62,4 +65,4 @@ router.post('/', async (req, res) => {
 
 export default router
 
-//trying to fix populate
+//trying to fix the populate
