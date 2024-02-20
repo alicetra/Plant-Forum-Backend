@@ -5,22 +5,26 @@ import { plants } from "./users.js"
 const postsSchema = new mongoose.Schema({
     createdDateTime: { 
         type: Date,
+        // Default is the current date and time to create the datestamp
         default: Date.now},
     user: { 
+        // User ID from an existing user
         type: mongoose.ObjectId, 
         ref: 'User',
         required: true},
-        title: { 
-            type: String, 
-            // Set default title to null (for comments that don't have a title)
-            default: null,
-            required: true },
+          title: { 
+        type: String, 
+        // Set default title to null (for comments that don't have a title)
+        default: null,
+        required: true },
     content: {
         type: String, 
         required: true },
     image: { 
+        // URL String
         type: String },
     parentID: { 
+        // ID will be the post_id of the post that is the parent
         type: mongoose.ObjectId, 
         ref: 'Post',
         default: null},
@@ -31,10 +35,12 @@ const postsSchema = new mongoose.Schema({
         type: Boolean, 
         required: true },
     tags: { 
+        // Insert an array of strings (plant names)
         type: [String],
         required: true, 
+        // If user chooses a plant name that is not in the plantEnum array it throws an error
         enum: plants },
-    // an array of userIDs object of users who have liked the post
+    // An array of userID objects of thos that have liked the post
     reactions: [ {
         type: mongoose.ObjectId, 
         ref: 'User'}
