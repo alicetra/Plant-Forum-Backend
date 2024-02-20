@@ -84,5 +84,3 @@ router.post('/', async (req, res) => {
 })
 
 export default router
-
-//trying to fix the populate
