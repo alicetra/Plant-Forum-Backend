@@ -3,6 +3,29 @@ import PostModel from '../models/posts.js'
 
 const router = Router()
 
+// route to delete a comment
+router.delete('/:id', async (req, res) => {
+    try {
+        const entry = await PostModel.findById(req.params.id)
+
+        if (!entry) {
+            return res.status(404).send({ error: 'Entry not found' })
+        }
+
+        if (entry.isThreadStarter === false && entry.isComment === true) {
+            const deletedEntry = await PostModel.findByIdAndDelete(req.params.id)
+            if (deletedEntry) {
+                res.sendStatus(204)
+            } 
+        } else {
+            res.status(403).send({ error: 'Entry does not meet criteria' })
+        }
+    } catch (err) {
+        res.status(500).send({ error: err.message })
+    }
+})
+
+
 // route to ammend the fields of a single post
 router.put('/:id', async (req, res) => {
     try {
