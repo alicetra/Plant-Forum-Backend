@@ -12,7 +12,7 @@ const postsSchema = new mongoose.Schema({
         type: mongoose.ObjectId, 
         ref: 'User',
         required: true},
-          title: { 
+    title: { 
         type: String, 
         // Set default title to null (for comments that don't have a title)
         default: null,
