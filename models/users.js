@@ -1,9 +1,5 @@
 import mongoose from 'mongoose'
 
-
-//setting our plants selections that user can pick from that they have 
-
-
 const usersSchema = new mongoose.Schema({
     username: { 
       type : String,
@@ -31,7 +27,7 @@ const usersSchema = new mongoose.Schema({
     },
 
     profilePicture: {
-      // it would be the url of the image
+      // String as this would be the image URL
       type: String,
       required: true,
     }
