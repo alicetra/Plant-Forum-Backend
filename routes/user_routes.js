@@ -8,19 +8,31 @@ import { jwt_payload_handler} from "../jwt.js"
 const router = Router()
 
 router.post('/register', async (req, res) => {
-    try {
-        // Check if the username already exists
-        const existingUser = await UserModel.findOne({ username: req.body.username })
-        if (existingUser) {
-            return res.status(400).send({ error: 'Username taken, please type a different username' })
-        }
 
+    // I need to save my error message in an array else I won't be able to return both error message in React and match them to the relevent component
+    let Displayederrors = []
+
+    // Check if the username already exists
+    const existingUser = await UserModel.findOne({ username: req.body.username })
+    if (existingUser) {
+        Displayederrors.push('Username taken, please type a different username')
+    }
+
+    //check if password lenght is what is required
+    if (req.body.password.length < 8) {
+        Displayederrors.push('Password must be a minimum of 8 characters long')
+    }
+
+    // if there is any error that was saved in Displayederrors send then into an array of error to the browser
+    if (Displayederrors.length > 0) {
+        return res.status(400).send({ Displayederrors })
+    }
+
+    try {
         const userInput = {
             username: req.body.username,
-            // hashed input password and do 10 round of salt 
             password: await bcrypt.hash(req.body.password, 10),
             plants: req.body.plants,
-            // set the profiplePicture to what the user upload or if nothing is provided default to the link
             profilePicture: req.body.profilePicture || "https://pics.craiyon.com/2023-07-02/fa5dc6ea1a0d4c6fa9294b54c6edf1e9.webp"
         }
 
