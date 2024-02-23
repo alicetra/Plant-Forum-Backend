@@ -1,5 +1,6 @@
 import mongoose from 'mongoose'
 
+
 const usersSchema = new mongoose.Schema({
     username: { 
       type : String,
@@ -32,6 +33,7 @@ const usersSchema = new mongoose.Schema({
       required: true,
     }
 })
+
 
 const UserModel = mongoose.model('User', usersSchema)
 
