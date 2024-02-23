@@ -3,7 +3,7 @@ import PostModel from '../models/posts.js'
 
 const router = Router()
 
-// route to delete a comment
+// Route to delete a comment
 router.delete('/:id', async (req, res) => {
     try {
         const entry = await PostModel.findById(req.params.id)
@@ -26,7 +26,7 @@ router.delete('/:id', async (req, res) => {
 })
 
 
-// route to ammend the fields of a single post
+// Route to update a single post
 router.put('/:id', async (req, res) => {
     try {
         // req.params is an object that contains route parameter values
@@ -46,21 +46,22 @@ router.put('/:id', async (req, res) => {
     }
 })
 
-//commented this out for now I dont believe we use it anywhere in our react components
-// // Route to get a single post / comment 
-// router.get('/:id', async (req, res) => {
-//     try {
-//         const entry = await PostModel.findById(req.params.id).populate('user')
-//         if(entry){
-//             res.send(entry)
-//         } else {
-//             res.status(404).send({ error: 'Entry not found'})
-//         }
-//     }
-//     catch (err) {
-//         res.status(500).send({error: err.message})
-//     }
-// })
+
+// Route to get a single post / comment 
+router.get('/:id', async (req, res) => {
+    try {
+        const entry = await PostModel.findById(req.params.id).populate('user')
+        if(entry){
+            res.send(entry)
+        } else {
+            res.status(404).send({ error: 'Entry not found'})
+        }
+    }
+    catch (err) {
+        res.status(500).send({error: err.message})
+    }
+})
+
 
 // Route to get all posts
 router.get('/', async (req, res) => {
