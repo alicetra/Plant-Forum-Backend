@@ -10,22 +10,22 @@ const router = Router()
 router.post('/register', async (req, res) => {
 
     // I need to save my error message in an array else I won't be able to return both error message in React and match them to the relevent component
-    let Displayederrors = [];
+    let Displayederrors = []
 
     // Check if the username already exists
     const existingUser = await UserModel.findOne({ username: req.body.username })
     if (existingUser) {
-        Displayederrors.push('Username taken, please type a different username');
+        Displayederrors.push('Username taken, please type a different username')
     }
 
     //check if password lenght is what is required
     if (req.body.password.length < 8) {
-        Displayederrors.push('Password must be a minimum of 8 characters long');
+        Displayederrors.push('Password must be a minimum of 8 characters long')
     }
 
     // if there is any error that was saved in Displayederrors send then into an array of error to the browser
     if (Displayederrors.length > 0) {
-        return res.status(400).send({ Displayederrors });
+        return res.status(400).send({ Displayederrors })
     }
 
     try {
