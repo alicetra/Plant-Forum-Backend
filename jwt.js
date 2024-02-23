@@ -5,7 +5,6 @@ const jwt_payload_handler = (user) => {
     }
 }
 
-
 export {jwt_payload_handler}
 
 
