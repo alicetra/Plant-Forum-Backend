@@ -9,6 +9,12 @@ const router = Router()
 
 router.post('/register', async (req, res) => {
     try {
+        // Check if the username already exists
+        const existingUser = await UserModel.findOne({ username: req.body.username })
+        if (existingUser) {
+            return res.status(400).send({ error: 'Username taken, please type a different username' })
+        }
+
         const userInput = {
             username: req.body.username,
             // hashed input password and do 10 round of salt 
