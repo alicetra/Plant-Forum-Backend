@@ -40,11 +40,7 @@ router.put('/:id', async (req, res) => {
         const newPassword = req.body.newPassword
 
         if (oldPassword && newPassword) {
-            const user = await UserModel.findById(userId);
-
-            if (!user) {
-                return res.status(404).json({ error: 'User not found' })
-            }
+            const user = await UserModel.findById(userId)
 
             const passwordMatch = await bcrypt.compare(oldPassword, user.password)
             if (!passwordMatch) {
@@ -52,7 +48,7 @@ router.put('/:id', async (req, res) => {
             }
 
             const hashedNewPassword = await bcrypt.hash(newPassword, 10)
-            userInput.password = hashedNewPassword;
+            userInput.password = hashedNewPassword
         }
 
         const updatedUser = await UserModel.findByIdAndUpdate(userId, userInput, { new: true })
