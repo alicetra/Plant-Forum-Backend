@@ -89,13 +89,13 @@ router.post('/login', async (req, res) => {
         // Check if user exists
         const user = await UserModel.findOne({ username: userInput.username })
         if (!user) {
-            return res.status(400).json({ error: 'User or password is invalid' })
+            return res.status(400).json({ error: 'User or Password is invalid' })
         }
 
         // Check if password matches
          const isMatch = await bcrypt.compare(userInput.password, user.password)
         if (!isMatch) {
-                return res.status(400).json({ error: 'User or password is invalid' })
+                return res.status(400).json({ error: 'User or Password is invalid' })
                 }
     
         //set token with custom payload with the jwt_payload_handler
