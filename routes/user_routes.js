@@ -99,8 +99,7 @@ router.put('/:id', async (req, res) => {
         res.status(200).json(updatedUser)
 
     } catch (err) {
-        Displayederrors.push(err.message)
-        res.status(400).send({ Displayederrors })
+        res.status(400).send({ error: err.message })
     }
 })
 
