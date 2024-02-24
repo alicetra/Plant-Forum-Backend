@@ -48,8 +48,18 @@ router.put('/:id', async (req, res) => {
 
     const userId = req.params.id
 
+    let Displayederrors = []
+
+    // if there is any error that was saved in Displayederrors send then into an array of error to the browser
+    if (Displayederrors.length > 0) {
+        return res.status(400).send({ Displayederrors })
+    }
+
+
     try {
+        
         const userInput = {
+            username: req.body.username,
             profilePicture: req.body.profilePicture ,
             plants: req.body.plants                     
         }
@@ -57,16 +67,31 @@ router.put('/:id', async (req, res) => {
         const oldPassword = req.body.oldPassword
         const newPassword = req.body.newPassword
 
+        // Check if the username already exists
+        const existingUser = await UserModel.findOne({ username: req.body.username })
+        if (existingUser) {
+            Displayederrors.push('Username taken, please type a different username')
+        }
+        
+
         if (oldPassword && newPassword) {
             const user = await UserModel.findById(userId)
 
             const passwordMatch = await bcrypt.compare(oldPassword, user.password)
             if (!passwordMatch) {
-                return res.status(400).json({ error: 'Incorrect old password' })
+                Displayederrors.push('Incorrect old password')
+            }
+
+            if (req.body.newPassword.length < 8) {
+                Displayederrors.push('Password must be a minimum of 8 characters long')
             }
 
             const hashedNewPassword = await bcrypt.hash(newPassword, 10)
             userInput.password = hashedNewPassword
+        }
+
+        if (Displayederrors.length > 0) {
+            return res.status(400).json({ Displayederrors })
         }
 
         const updatedUser = await UserModel.findByIdAndUpdate(userId, userInput, { new: true })
@@ -74,7 +99,8 @@ router.put('/:id', async (req, res) => {
         res.status(200).json(updatedUser)
 
     } catch (err) {
-        res.status(400).send({ error: err.message })
+        Displayederrors.push(err.message)
+        res.status(400).send({ Displayederrors })
     }
 })
 
