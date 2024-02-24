@@ -111,6 +111,16 @@ router.post('/login', async (req, res) => {
 })
 
 
+// Route to get all posts
+router.get('/', async (req, res) => {
+    try {
+        res.send(await UserModel.find())
+    } catch (err) {
+        res.status(500).send({ error: err.message })
+    }
+})
+
+
 
 
 export default router
