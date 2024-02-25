@@ -4,8 +4,20 @@ import bcrypt from 'bcrypt'
 import jwt from 'jsonwebtoken'
 import { jwt_payload_handler} from "../jwt.js"
 
-
 const router = Router()
+
+router.get('/:id', async (req, res) => {
+    try {
+        const user = await UserModel.findById(req.params.id)
+        if (user) {
+            res.send(user)
+        } else {
+            res.status(404).send('User Not Found')
+        }
+    } catch (err) {
+        res.status(500).send({ error: err.message })
+    }
+})
 
 // Route to register / sign up
 router.post('/register', async (req, res) => {
@@ -101,8 +113,7 @@ router.put('/:id', async (req, res) => {
         res.status(200).json(updatedUser)
 
     } catch (err) {
-        Displayederrors.push(err.message)
-        res.status(400).send({ Displayederrors })
+        res.status(400).send({ error: err.message })
     }
 })
 
@@ -147,5 +158,8 @@ router.get('/', async (req, res) => {
         res.status(500).send({ error: err.message })
     }
 })
+
+
+
 
 export default router
