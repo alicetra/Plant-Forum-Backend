@@ -4,9 +4,22 @@ import bcrypt from 'bcrypt'
 import jwt from 'jsonwebtoken'
 import { jwt_payload_handler} from "../jwt.js"
 
-
 const router = Router()
 
+router.get('/:id', async (req, res) => {
+    try {
+        const user = await UserModel.findById(req.params.id)
+        if (user) {
+            res.send(user)
+        } else {
+            res.status(404).send('User Not Found')
+        }
+    } catch (err) {
+        res.status(500).send({ error: err.message })
+    }
+})
+
+// Route to register / sign up
 router.post('/register', async (req, res) => {
 
     // I need to save my error message in an array else I won't be able to return both error message in React and match them to the relevent component
@@ -44,6 +57,8 @@ router.post('/register', async (req, res) => {
     }
 })
 
+
+// Route to edit user information
 router.put('/:id', async (req, res) => {
 
     const userId = req.params.id
@@ -54,7 +69,6 @@ router.put('/:id', async (req, res) => {
     if (Displayederrors.length > 0) {
         return res.status(400).send({ Displayederrors })
     }
-
 
     try {
         
@@ -104,7 +118,7 @@ router.put('/:id', async (req, res) => {
 })
 
 
-
+// Route to login
 router.post('/login', async (req, res) => {
     try {
         const userInput = {
@@ -136,7 +150,7 @@ router.post('/login', async (req, res) => {
 })
 
 
-// Route to get all posts
+// Route to get all users' posts
 router.get('/', async (req, res) => {
     try {
         res.send(await UserModel.find())
