@@ -150,7 +150,7 @@ router.post('/login', async (req, res) => {
 })
 
 
-// Route to get all users' posts
+// Route to get all users
 router.get('/', async (req, res) => {
     try {
         res.send(await UserModel.find())
