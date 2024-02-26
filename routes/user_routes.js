@@ -3,6 +3,7 @@ import UserModel from '../models/users.js'
 import bcrypt from 'bcrypt'
 import jwt from 'jsonwebtoken'
 import { jwt_payload_handler} from "../jwt.js"
+import {verifyToken} from '../jwt.js'
 
 const router = Router()
 
@@ -63,7 +64,7 @@ router.post('/register', async (req, res) => {
 
 
 // Route to edit user information
-router.put('/:id', async (req, res) => {
+router.put('/:id', verifyToken, async (req, res) => {
 
     const userId = req.params.id
 

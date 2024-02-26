@@ -1,10 +1,11 @@
 import { Router } from "express"
 import PostModel from '../models/posts.js'
+import {verifyToken} from '../jwt.js'
 
 const router = Router()
 
 // Route to delete a comment
-router.delete('/:id', async (req, res) => {
+router.delete('/:id', verifyToken, async (req, res) => {
     try {
         const entry = await PostModel.findById(req.params.id)
 
@@ -27,7 +28,7 @@ router.delete('/:id', async (req, res) => {
 
 
 // Route to update a single post
-router.put('/:id', async (req, res) => {
+router.put('/:id', verifyToken, async (req, res) => {
     try {
         // req.params is an object that contains route parameter values
         // :id is a route parameter. When you navigate to a URL like /60d5ecf31f4e5c5508fe8b2a, 
@@ -74,7 +75,7 @@ router.get('/', async (req, res) => {
 
 
 // Route to create a new post / comment
-router.post('/', async (req, res) => {
+router.post('/', verifyToken, async (req, res) => {
     try {
         const createdPost = await (((await PostModel.create(req.body)).populate('user', '-password -plants')))
         res.status(201).send(createdPost)
