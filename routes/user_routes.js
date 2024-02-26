@@ -83,10 +83,13 @@ router.put('/:id', async (req, res) => {
 
         // Check if the username already exists
         const existingUser = await UserModel.findOne({ username: req.body.username })
-        if (existingUser) {
+
+        // Get the current user
+        const currentUser = await UserModel.findById(userId)
+
+        if (existingUser && existingUser.username !== currentUser.username) {
             Displayederrors.push('Username taken, please type a different username')
         }
-        
 
         if (oldPassword && newPassword) {
             const user = await UserModel.findById(userId)
