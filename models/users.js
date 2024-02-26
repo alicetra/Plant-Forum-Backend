@@ -4,6 +4,8 @@ import mongoose from 'mongoose'
 const usersSchema = new mongoose.Schema({
     username: { 
       type : String,
+      //doesnt allow empty string 
+      trim: true,
       // Even though I set type to string I have to include cast to false or else it will cast integer input to string and accept it as a valid input 
       cast:false,
       // Match any character except white-space eg (line breaks, tabs, spaces, hard spaces)
