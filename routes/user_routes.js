@@ -25,6 +25,10 @@ router.post('/register', async (req, res) => {
     // I need to save my error message in an array else I won't be able to return both error message in React and match them to the relevent component
     let Displayederrors = []
 
+    if (!req.body.username) {
+        Displayederrors.push('Username is required')
+    }
+
     // Check if the username already exists
     const existingUser = await UserModel.findOne({ username: req.body.username })
     if (existingUser) {
@@ -81,6 +85,10 @@ router.put('/:id', async (req, res) => {
         const oldPassword = req.body.oldPassword
         const newPassword = req.body.newPassword
 
+        if (!req.body.username) {
+            Displayederrors.push('Username is required')
+        }
+        
         // Check if the username already exists
         const existingUser = await UserModel.findOne({ username: req.body.username })
 
