@@ -50,13 +50,14 @@ Sproutly is a solution to this problem, providing a unified forum platform where
 - All Users ware able to search threads universally by tags.
 - All users are able to filter their homepage by date. This will be a limited choice between either ascending or descending order. This functionality also extends to comments on thread posts.
 
-
 **Reactions**
 - Users that are logged in are able to react (e.g. 'like') to comments and thread posts.
 - All users are able to view the number of reactions on a given thread post or comment.
 
 **Infinite scroll**
-- To enhance the user experience we will implement an infinite scroll feature on the user home page rather than pagination. This is in line with current industry standards and is a common user flow in similar applications in the market today.
+- To enhance the user experience we will implement an infinite scroll feature on the user home page rather than pagination. This is in line with current industry standards and is a common user flow in similar applications in the market today. 
+
+*Update: Due to time constrain infinite scroll was taken out of the scope of our project*
 
 **Dark Mode**
 - To enhance user experience and prevent eyestrain we will implement a dark mode option which is a very popular web design feature.
@@ -100,6 +101,7 @@ The need for flexibility drives our choice to utilize a Level 0 DFD: we aim to g
 ![Alt text](docs/part-a/Dataflow/Filtering.svg)
 ![Alt text](docs/part-a/Dataflow/Liking.svg)
 ![Alt text](docs/part-a/Dataflow/Picture.svg)
+*Update: This diagram no longer reflect the image dataflow. We went with Cloudinary as a host cloud image. Therefore the image gets directly uploaded to their database,bypassing ours first and then the URL is returned directly from Cloudinary to our database*
 ![Alt text](docs/part-a/Dataflow/Thread.svg)
 ![Alt text](docs/part-a/Dataflow/User.svg)
 ![Alt text](docs/part-a/Dataflow/View.svg)
@@ -202,7 +204,9 @@ Upon discussion and further development of our ideas, the need to delineate spec
 
 - As a *registered Sproutly user*, I would like to be able to edit my profile on a dedicated page, in a manner familiar to me (i.e. exact fields and presentation of the sign-up page), so that I can keep my profile relevant and my plant keeping record up to date.
 
-- As a *registered Sproutly user* with a desire to delete my profile, I would like an option on the edit profile page to facilitate this, so that I can erase my data from the forum and leave the community if I so choose.
+- As a *registered Sproutly user* with a desire to delete my profile, I would like an option on the edit profile page to facilitate this, so that I can erase my data from the forum and leave the community if I so choose.  
+
+  *Update: Due to time constrain we have removed the user ablity to delete their account*
 
 - As a *browser* or *registered user* who is interested in a particular user's contributions, I would like to be able to view a page dedicated to their post history and total like count, so that I can view their contributions and engage more deeply with the community.
 
@@ -313,6 +317,67 @@ Link to live board
 
 ### Friday 16 Feb
 ![Alt text](docs/part-a/Trello/Kat/fri-16-feb/16-feb-1.jpg)
+![Alt text](docs/part-b/Trello/Alice/16022024.PNG)
+
+### Monday 19 Feb
+![Alt text](docs/part-b/Trello/Alice/190202024.PNG)
+![Alt text](docs/part-b/Trello/Alice/19022024p2.PNG)
+![Alt text](docs/part-b/Trello/Alice/19022024p1.PNG)
+
+### Tuesday 20 Feb
+![Alt text](docs/part-b/Trello/Alice/20022024.PNG)
+![Alt text](docs/part-b/Trello/Alice/20022024p1.PNG)
+
+### Wednesday 21 Feb
+
+
+### Thursday 22 Feb
+![Alt text](docs/part-b/Trello/Alice/22022024p1.PNG)
+
+### Friday 23 Feb
+![Alt text](docs/part-b/Trello/Alice/23022024.PNG)</br> 
+![Alt text](docs/part-b/Trello/Alice/23022024p3.PNG)
+### Saturday 24 Feb
+![Alt text](docs/part-b/Trello/Alice/24022024.PNG)
+
+### Monday 26 Feb
+![Alt text](docs/part-b/Trello/Alice/26022024.PNG)
+
+### Tuesday 27 Feb
+![Alt text](docs/part-b/Trello/Alice/27022027.PNG)
+
+### Wednesday 28 Feb
+![Alt text](docs/part-b/Trello/Alice/28022024.PNG)
+![Alt text](docs/part-b/Trello/Alice/28022024p1.PNG)
+
+# Stand-ups 
+As part of our agile methodology project management, we participated in daily-stands as a team. We would meet daily at 9am on discord to discuss and share what each members did yesterday, what struggles if any we were encountering and what were planning to do next. We would take turns among team members to share the responsibility of posting updates in the Coder Academy channel for our team stand-up message. Below are our stand-ups screenshot throughout the course of our project development.
+
+### Monday 19 Feb
+![Alt text](docs/part-b/Stand-ups/19022024.PNG)
+
+### Tuesday 20 Feb
+![Alt text](docs/part-b/Stand-ups/2002024.PNG)
+
+### Wednesday 21 Feb
+![Alt text](docs/part-b/Stand-ups/21022024.PNG)
+
+### Thursday 22 Feb
+![Alt text](docs/part-b/Stand-ups/22022024.PNG)
+
+### Friday 23 Feb
+![Alt text](docs/part-b/Stand-ups/23022024.PNG)
+
+### Monday 26 Feb
+![Alt text](docs/part-b/Stand-ups/26022024.PNG)
+
+### Tuesday 27 Feb
+![Alt text](docs/part-b/Stand-ups/27022024.PNG)
+
+### Wednesday 28 Feb
+![Alt text](docs/part-b/Stand-ups/28022024.PNG)
+
+
 
 # References 
 GeeksforGeeks. (n.d.). Levels in Data Flow Diagrams (DFD). Available at: https://www.geeksforgeeks.org/levels-in-data-flow-diagrams-dfd/
