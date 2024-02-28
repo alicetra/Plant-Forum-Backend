@@ -4,8 +4,6 @@ import {verifyToken} from '../jwt.js'
 
 const router = Router()
 
-
-
 // Route to delete a comment
 router.delete('/:id', verifyToken, async (req, res) => {
     try {
@@ -66,6 +64,7 @@ router.get('/:id', async (req, res) => {
 
 // Route to get all posts
 router.get('/', async (req, res) => {
+    // Populate the user along with posts as each post is tied to a user and we will need to display user details
     try {
         res.send(await PostModel.find().populate('user'))
     } catch (err) {
@@ -77,6 +76,8 @@ router.get('/', async (req, res) => {
 // Route to create a new post / comment
 router.post('/', verifyToken, async (req, res) => {
     try {
+        // Populate the user along with posts as each post is tied to a user and we will need to display user details
+        // Remove pw and plant array from the populated user as we don't use those when updating a post
         const createdPost = await (((await PostModel.create(req.body)).populate('user', '-password -plants')))
         res.status(201).send(createdPost)
     }
