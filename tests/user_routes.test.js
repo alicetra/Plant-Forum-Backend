@@ -1,8 +1,8 @@
 import app from '../app.js'
 import request from 'supertest'
 import { connectToDatabase } from '../db.js'
-import UserModel from '../models/users.js'
-// I have to import the connectTodabase in my test or else it will have  Operation 'featureds.find()` buffering timed out after 10000ms testing my routes since I need access to mongoose and in app.js we dont have that connection there
+
+// I have to import the connectTodabase in my test or else it will have  Operation buffering timed out after 10000ms since I need access to mongoose and in app.js we dont have that connection there
 connectToDatabase()
 
 
