@@ -117,11 +117,13 @@ router.put('/:id', verifyToken, async (req, res) => {
             userInput.password = hashedNewPassword
         }
 
+        if (Displayederrors.length > 0) {
+            return res.status(400).json({ Displayederrors })
+        }      
         const updatedUser = await UserModel.findByIdAndUpdate(userId, userInput, { new: true })
         res.status(200).json(updatedUser)
-
     } catch (err) {
-        res.status(400).send({ Displayederrors })
+        res.status(400).send({ error: err.message })
     }
 })
 
