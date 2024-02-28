@@ -91,6 +91,44 @@ React is a frontend Javascript library that will enable us to build dynamic user
 #### Node.js
 Node.js is a server-side JavaScript runtime that enables the running of JavaScript code outside of a web browser. It provides an event-driven, non-blocking model, making it efficient for handling asynchronous requests. Node.js will be used alongside Express.js to help develop our server-side tasks.
 
+## Project libraries
+
+#### bcrypt
+Used to safety hash and salt user password.
+
+#### cors
+Middleware that enable cross-origin resource sharing to allow us to connect our api with our frontend in development and production environment.
+
+#### dotenv
+Allowed us to load environment variables in an .env file and protect app secret keys and configurations 
+
+#### jsonwebtoken
+Used as a library to create and verify JWT for stateless and safe authentication. 
+
+#### mongoose
+Allowed us to do object modeling and enforce structure and validation on our MongoDB collections.
+
+#### react-router-dom & react router dom
+Enable client-side navigation for our react application. 
+
+#### Jest & SuperTest
+Javascript formal testing frameworks. We used it extensively to for backing testings.
+
+#### React Icons
+A library that provided us with our thumb up icon to used within our react component 
+
+#### Bulma
+
+#### jwt-decode
+A javascript library that was used to decode our JWT in our react application. It allowed us to extract the payload information from the provided JWT.
+
+#### Cloudinary
+Cloud-based platform that we used to managed the upload of our images.
+
+#### Testing Library & Vitest
+Testing libraries for React component. It integrate Jest and allowed us to replicate user-experience formally in a testing environment.
+
+
 # Data Flow Diagrams
 We developed a Level 0 Data Flow Diagram (DFD) in the context of our project to provide an overarching view of our data. This highest level DFD represents major processes, data flows, and database within the system without delving into their intricate details.
 
