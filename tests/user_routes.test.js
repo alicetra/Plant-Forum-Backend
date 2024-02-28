@@ -47,7 +47,7 @@ describe("Get /users/:id", () => {
   describe('POST /login', () => {
     test('should log in a user and return a token', async () => {
 
-        const mockUser = {
+        const User = {
             username: "alicetest4",
             password: "alicetest4",
             profilePicture: "https://pics.craiyon.com/2023-07-02/fa5dc6ea1a0d4c6fa9294b54c6edf1e9.webp",
@@ -55,7 +55,7 @@ describe("Get /users/:id", () => {
 
         const res = await request(app)
             .post('/users/login')
-            .send(mockUser)
+            .send(User)
 
         expect(res.status).toBe(201)
         expect(res.body).toHaveProperty("user")
