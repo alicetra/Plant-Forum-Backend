@@ -4,15 +4,19 @@ import {verifyToken} from '../jwt.js'
 
 const router = Router()
 
+
+
 // Route to delete a comment
 router.delete('/:id', verifyToken, async (req, res) => {
     try {
+        // req.params is an object that contains route parameter values
         const entry = await PostModel.findById(req.params.id)
 
         if (!entry) {
             return res.status(404).send({ error: 'Entry not found' })
         }
 
+        // check if the post is indeed just a comment, this is needed since we don't want orphans posts if a thread starter post is deleted.
         if (entry.isThreadStarter === false && entry.isComment === true) {
             const deletedEntry = await PostModel.findByIdAndDelete(req.params.id)
             if (deletedEntry) {
@@ -30,11 +34,6 @@ router.delete('/:id', verifyToken, async (req, res) => {
 // Route to update a single post
 router.put('/:id', verifyToken, async (req, res) => {
     try {
-        // req.params is an object that contains route parameter values
-        // :id is a route parameter. When you navigate to a URL like /60d5ecf31f4e5c5508fe8b2a, 
-        // Express captures “60d5ecf31f4e5c5508fe8b2a” and stores it in req.params under the key “id”
-        // since req.params.id is “60d5ecf31f4e5c5508fe8b2a”, findById(req.params.id) is equivalent to findById("60d5ecf31f4e5c5508fe8b2a"),
-        // which tells mongoose to find one document in the Posts collection where the _id field is “60d5ecf31f4e5c5508fe8b2a”.
         const updatedEntry = await PostModel.findByIdAndUpdate(req.params.id, req.body, { new: true }) //new set to true to return the updated entry
         if(updatedEntry){
             res.send(updatedEntry)
@@ -51,6 +50,7 @@ router.put('/:id', verifyToken, async (req, res) => {
 // Route to get a single post / comment 
 router.get('/:id', async (req, res) => {
     try {
+        // we populating the user array of the post since this is needed for our react post components of display who is the author of that specific post
         const entry = await PostModel.findById(req.params.id).populate('user')
         if(entry){
             res.send(entry)

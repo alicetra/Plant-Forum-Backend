@@ -7,6 +7,7 @@ import {verifyToken} from '../jwt.js'
 
 const router = Router()
 
+// Route to get a single user object based of the ID provided in the params
 router.get('/:id', async (req, res) => {
     try {
         const user = await UserModel.findById(req.params.id)
@@ -23,10 +24,12 @@ router.get('/:id', async (req, res) => {
 // Route to register / sign up
 router.post('/register', async (req, res) => {
 
-    // I need to save my error message in an array else I won't be able to return both error message in React and match them to the relevent component
+    // I need to save my error message in an array else I won't be able to return both error message in React and match them to the relevent components. 
     let Displayederrors = []
 
+    // Check if the username field is left empty and remind user that they need to fill the field.
     if (!req.body.username) {
+        // push that specific error into the collections of errors in Displayederrors array.
         Displayederrors.push('Username is required')
     }
 
@@ -49,8 +52,10 @@ router.post('/register', async (req, res) => {
     try {
         const userInput = {
             username: req.body.username,
+            // hash and salt the password
             password: await bcrypt.hash(req.body.password, 10),
             plants: req.body.plants,
+            // if user do not input a profile picture it will  default to the "or" hard coded image
             profilePicture: req.body.profilePicture || "https://pics.craiyon.com/2023-07-02/fa5dc6ea1a0d4c6fa9294b54c6edf1e9.webp"
         }
 
@@ -69,11 +74,6 @@ router.put('/:id', verifyToken, async (req, res) => {
     const userId = req.params.id
 
     let Displayederrors = []
-
-    // if there is any error that was saved in Displayederrors send then into an array of error to the browser
-    if (Displayederrors.length > 0) {
-        return res.status(400).send({ Displayederrors })
-    }
 
     try {
         
@@ -96,18 +96,23 @@ router.put('/:id', verifyToken, async (req, res) => {
         // Get the current user
         const currentUser = await UserModel.findById(userId)
 
+        // if the user exist but it is not the currentuser then display the error message. If the user is alicetest and they still input alicetest in the pre-filled field in react
+        // then do not display that "Username taken" error since technically its taken by them.
         if (existingUser && existingUser.username !== currentUser.username) {
             Displayederrors.push('Username taken, please type a different username')
         }
 
+        // if user input anything in the oldPassword and newPassword field
         if (oldPassword && newPassword) {
             const user = await UserModel.findById(userId)
 
+            // check if the old password user inputted match the currenct password in the database
             const passwordMatch = await bcrypt.compare(oldPassword, user.password)
             if (!passwordMatch) {
                 Displayederrors.push('Incorrect old password')
             }
 
+            // check if the newly set password has the right amount of characters
             if (req.body.newPassword.length < 8) {
                 Displayederrors.push('Password must be a minimum of 8 characters long')
             }
@@ -149,7 +154,7 @@ router.post('/login', async (req, res) => {
                 return res.status(400).json({ error: 'User or Password is invalid' })
                 }
     
-        //set token with custom payload with the jwt_payload_handler
+        //set token with custom payload with the jwt_payload_handler and make it expired after 1h 
         const token = jwt.sign(jwt_payload_handler(user), process.env.JWT_SECRET, {
             expiresIn: '1h',
         })

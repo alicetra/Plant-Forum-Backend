@@ -1,4 +1,5 @@
 import mongoose from "mongoose"
+// this import is crucial without it we cannot do populate(). Even though UserModel is not directly called in this file, it is needed for populate to work in our routes.
 import UserModel from "./users.js"
 
 // Posts Schema

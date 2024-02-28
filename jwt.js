@@ -9,12 +9,12 @@ const jwt_payload_handler = (user) => {
 
 const verifyToken = (req, res, next) => {
     const bearerHeader = req.headers['authorization']
+    // if there is no bearerHeader
     if (!bearerHeader) {
-        // Authorization header is missing
         res.status(401).send({ error: 'Access Denied' })
     } else {
         const bearerToken = bearerHeader.split(' ')[1]
-        req.token = bearerToken;
+        req.token = bearerToken
         jwt.verify(req.token, process.env.JWT_SECRET, (err) => {
             if (err) {
                 // Token verification failed
