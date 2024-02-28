@@ -123,6 +123,7 @@ Javascript formal testing frameworks. We used it extensively to for backing test
 A library that provided us with our thumb up icon to used within our react component 
 
 #### Bulma
+Used as a frontend CSS framework. Bulma provided a base for our styles to which we then added custom CSS on top of in order to create a bespoke design suitable for our target audience.
 
 #### jwt-decode
 A javascript library that was used to decode our JWT in our react application. It allowed us to extract the payload information from the provided JWT.
