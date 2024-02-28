@@ -1,6 +1,7 @@
 import app from '../app.js'
 import request from 'supertest'
 import { connectToDatabase } from '../db.js'
+import UserModel from '../models/users.js'
 //I have to import the connectTodabase in my test or else it will have  Operation 'featureds.find()` buffering timed out after 10000ms testing my routes since I need access to mongoose and in app.js we dont have that connection there
 connectToDatabase()
 
@@ -41,3 +42,40 @@ describe("Get /users/:id", () => {
       expect(res.header["content-type"]).toContain("json")
     })
   })
+
+
+  describe('POST /login', () => {
+    test('should log in a user and return a token', async () => {
+
+        const mockUser = {
+            username: "alicetest4",
+            password: "alicetest4",
+            profilePicture: "https://pics.craiyon.com/2023-07-02/fa5dc6ea1a0d4c6fa9294b54c6edf1e9.webp",
+        }
+
+        const res = await request(app)
+            .post('/users/login')
+            .send(mockUser)
+
+        expect(res.status).toBe(201)
+        expect(res.body).toHaveProperty("user")
+        expect(res.body).toBeInstanceOf(Object)
+        expect(res.body).toHaveProperty("token")
+        expect(res.header["content-type"]).toContain("json")
+    })
+
+    test('should return an error if user or password is invalid', async () => {
+        const invalidUser = {
+            username: "invaliduser",
+            password: "invalidpassword",
+        }
+
+        const res = await request(app)
+            .post('/users/login')
+            .send(invalidUser)
+
+        expect(res.status).toBe(400)
+        expect(res.header["content-type"]).toContain("json")
+        expect(res.body).toHaveProperty("error", "User or Password is invalid")
+    })
+})
