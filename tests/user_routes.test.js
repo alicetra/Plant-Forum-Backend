@@ -48,8 +48,8 @@ describe("Get /users/:id", () => {
     test('should log in a user and return a token', async () => {
 
         const User = {
-            username: "alicetest4",
-            password: "alicetest4",
+            username: "FernFairy_89",
+            password: "password",
             profilePicture: "https://pics.craiyon.com/2023-07-02/fa5dc6ea1a0d4c6fa9294b54c6edf1e9.webp",
         }
 
