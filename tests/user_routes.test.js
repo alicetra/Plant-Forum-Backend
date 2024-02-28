@@ -23,3 +23,21 @@ describe("Get /users", () => {
         })
     })
 })
+
+describe("Get /users/:id", () => {
+    test("test my get /users/:id to get a single user object", async () => {
+      const userId = "65d469278aaa81f8f6af8497"
+      const res = await request(app).get(`/users/${userId}`)
+      expect(res.status).toBe(200)
+      expect(res.header["content-type"]).toContain("json")
+      expect(res.body).toBeInstanceOf(Object)
+      expect(res.body).toEqual(expect.objectContaining({ username: "Lumi3" }))
+    })
+  
+    test("It should return 404 if a user does not exist", async () => {
+      const wrongUserId = "65d469278aaa81f8f6af8492"
+      const res = await request(app).get(`/users/${wrongUserId}`)
+      expect(res.status).toBe(404)
+      expect(res.header["content-type"]).toContain("json")
+    })
+  })

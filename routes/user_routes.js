@@ -13,7 +13,7 @@ router.get('/:id', async (req, res) => {
         if (user) {
             res.send(user)
         } else {
-            res.status(404).send('User Not Found')
+            res.status(404).send({error:'User Not Found'})
         }
     } catch (err) {
         res.status(500).send({ error: err.message })
