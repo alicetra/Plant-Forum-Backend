@@ -75,6 +75,10 @@ router.put('/:id', verifyToken, async (req, res) => {
 
     let Displayederrors = []
 
+    if (Displayederrors.length > 0) {
+        return res.status(400).json({ Displayederrors })
+    }
+    
     try {
         
         const userInput = {
@@ -119,10 +123,6 @@ router.put('/:id', verifyToken, async (req, res) => {
 
             const hashedNewPassword = await bcrypt.hash(newPassword, 10)
             userInput.password = hashedNewPassword
-        }
-
-        if (Displayederrors.length > 0) {
-            return res.status(400).json({ Displayederrors })
         }
 
         const updatedUser = await UserModel.findByIdAndUpdate(userId, userInput, { new: true })
