@@ -76,10 +76,6 @@ router.put('/:id', verifyToken, async (req, res) => {
 
     let Displayederrors = []
 
-    if (Displayederrors.length > 0) {
-        return res.status(400).json({ Displayederrors })
-    }
-
     try {
 
         const userInput = {
@@ -91,37 +87,31 @@ router.put('/:id', verifyToken, async (req, res) => {
         const oldPassword = req.body.oldPassword
         const newPassword = req.body.newPassword
 
-        if (!req.body.username) {
-            Displayederrors.push('Username is required')
-        }
-
         // Check if the username already exists
         const existingUser = await UserModel.findOne({ username: req.body.username })
-
-        // Get the current user
-        const currentUser = await UserModel.findById(userId)
-
-        // if the user exist but it is not the currentuser then display the error message. If the user is alicetest and they still input alicetest in the pre-filled field in react
-        // then do not display that "Username taken" error since technically its taken by them.
-        if (existingUser && existingUser.username !== currentUser.username) {
+        if (existingUser) {
             Displayederrors.push('Username taken, please type a different username')
         }
 
-        // if user input anything in the oldPassword and newPassword field
+
         if (oldPassword && newPassword) {
             const user = await UserModel.findById(userId)
 
-            // check if the old password user inputted match the currenct password in the database
             const passwordMatch = await bcrypt.compare(oldPassword, user.password)
             if (!passwordMatch) {
                 Displayederrors.push('Incorrect old password')
             }
-            // check if the newly set password has the right amount of characters
+
             if (req.body.newPassword.length < 8) {
                 Displayederrors.push('Password must be a minimum of 8 characters long')
             }
+
             const hashedNewPassword = await bcrypt.hash(newPassword, 10)
             userInput.password = hashedNewPassword
+        }
+
+        if (Displayederrors.length > 0) {
+            return res.status(400).json({ Displayederrors })
         }
 
         const updatedUser = await UserModel.findByIdAndUpdate(userId, userInput, { new: true })
@@ -129,7 +119,7 @@ router.put('/:id', verifyToken, async (req, res) => {
         res.status(200).json(updatedUser)
 
     } catch (err) {
-        res.status(400).send({ error: err.message })
+        res.status(400).send({ Displayederrors })
     }
 })
 
