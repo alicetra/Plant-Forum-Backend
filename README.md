@@ -3,8 +3,11 @@
 A full stack web application by **Alice Tram, Katrice Mountford & Ali Eideh**
 
 ## Links
+- [Sproutly Deployed Website](https://sproutly-five.vercel.app)
+- [Sproutly Deployed API](https://sproutly-api.onrender.com)
 - [Backend Github Repo](https://github.com/alicetra/Plant-Forum-Backend)
 - [Frontend Github Repo](https://github.com/kvtrice/sproutly-frontend)
+- [Link to Trello Board](https://trello.com/b/wTWqIemQ/alice-kat) 
 
 # Table of Contents
 - [General](#general)
@@ -17,6 +20,7 @@ A full stack web application by **Alice Tram, Katrice Mountford & Ali Eideh**
 - [User Stories](#user-stories)
 - [Wireframes](#wireframes)
 - [Development Plan (Trello Board)](#trello-board)
+<!-- - [Development Plan (Stand-ups)](#Stand-ups ) I tried to do it but I dunno I can't-->
 - [References](#references)
 
 
@@ -282,7 +286,7 @@ All users are able to view another users public profile through clicking on thei
 
 # Trello Board
 
-Link to live board
+[Link to Trello Board](https://trello.com/b/wTWqIemQ/alice-kat)
 
 ### Friday 9 Feb
 ![Alt text](docs/part-a/Trello/Alice/09022024AT1.JPG)
