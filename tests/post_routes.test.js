@@ -40,7 +40,7 @@ describe("GET /posts", () => {
 
 describe("GET /posts/:id", () => {
 	let res;
-	const postId = "65d469278aaa81f8f6af849c";
+	const postId = "65dfc128415135c453dedcc4";
 
 	beforeEach(async () => {
 		res = await request(app).get(`/posts/${postId}`);
@@ -53,18 +53,25 @@ describe("GET /posts/:id", () => {
 	});
 
 	test("Post has the correct data", async () => {
-		expect(res.body.title).toBe("How to test fertiliser?");
+		expect(res.body.title).toBe("Trouble with my Monstera");
 		expect(res.body.isThreadStarter).toBe(true);
 		expect(res.body.isComment).toBe(false);
-		expect(res.body.tags).toStrictEqual(["Birds nest fern"]);
+		expect(res.body.tags).toStrictEqual(["Monstera"]);
 		expect(res.body.image).toBe(
-			"https://res.cloudinary.com/djtgmjm16/image/upload/v1708665049/images/ctxehrewdcnustpeoayr.jpg"
+			"https://res.cloudinary.com/djtgmjm16/image/upload/v1709162431/images/monstera-yellow_s8ze18.jpg"
 		);
 	});
 
 	test("Post returns the correct user information", async () => {
-		expect(res.body.user._id).toBe("65d469278aaa81f8f6af8498");
-		expect(res.body.user.username).toBe("MichealBarry");
-		expect(res.body.user.plants).toStrictEqual(["ZZ plant", "Aloe vera"]);
+		expect(res.body.user._id).toBe("65dfb56bf946928166c6093e");
+		expect(res.body.user.username).toBe("LilyGreen21");
+		expect(res.body.user.plants).toStrictEqual([
+			"English Ivy",
+			"Lucky bamboo",
+			"Umbrella tree",
+			"String of pearls",
+			"Peace lily",
+			"Dragon tree (Dracaena)",
+		]);
 	});
 });
