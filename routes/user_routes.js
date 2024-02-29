@@ -93,6 +93,11 @@ router.put('/:id', verifyToken, async (req, res) => {
        // get the current user
        const currentUser = await UserModel.findById(userId)
    
+       if (!req.body.username) {
+        // push that specific error into the collections of errors in Displayederrors array.
+        Displayederrors.push('Username is required')
+    }
+    
        // if the user exist but it is not the currentuser then display the error message. If the user is alicetest and they still input alicetest in the pre-filled field in react
        // then do not display that "Username taken" error since technically its taken by them.
        if (existingUser && existingUser.username !== currentUser.username) {
